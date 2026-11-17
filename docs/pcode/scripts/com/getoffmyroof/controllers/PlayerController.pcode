@@ -1,0 +1,1280 @@
+package com.getoffmyroof.controllers
+{
+   import SWFStats.Log;
+   import com.getoffmyroof.engine.GameComponents;
+   import com.getoffmyroof.entity.Player;
+   import com.getoffmyroof.inventory.Equipment;
+   import com.getoffmyroof.inventory.EquipmentSlotGroups;
+   import com.getoffmyroof.inventory.Inventory;
+   import com.getoffmyroof.rewards.LevelRewards;
+   import com.getoffmyroof.rewards.PlayerRewards;
+   import com.getoffmyroof.save.ISaveable;
+   import com.getoffmyroof.save.IValueObject;
+   import com.getoffmyroof.save.LevelVO;
+   import com.getoffmyroof.save.PlayerVO;
+   import com.whatthefawk.GameFactory;
+   import com.whatthefawk.audio.AudioManager;
+   import com.whatthefawk.audio.AudioTypes;
+   import com.whatthefawk.math.Vector2D;
+   import com.whatthefawk.rewards.achievements.AchievementManager;
+   import com.whatthefawk.utils.Input;
+   import com.whatthefawk.utils.KeyCode;
+   import com.whatthefawk.weapons.melee.MeleeWeapon;
+   import com.whatthefawk.weapons.melee.MeleeWeaponFactory;
+   import com.whatthefawk.weapons.projectile.ProjectileWeapon;
+   import com.whatthefawk.weapons.projectile.ProjectileWeaponFactory;
+   import flash.events.EventDispatcher;
+   
+   public class PlayerController extends EventDispatcher implements ISaveable
+   {
+      
+      method
+         name null
+         returns null
+         
+         body
+            maxstack 1
+            localcount 1
+            initscopedepth 4
+            maxscopedepth 5
+            
+            code
+               getlocal0
+               pushscope
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      protected var _player:Player;
+      
+      protected var _playerRewards:PlayerRewards;
+      
+      protected var _numProjectileSlots:int = 2;
+      
+      protected var _equipment:Equipment;
+      
+      protected var _gameFactory:GameFactory;
+      
+      protected var _audioManager:AudioManager;
+      
+      protected var _meleeWeaponFactory:MeleeWeaponFactory;
+      
+      protected var _playerID:String = "Player";
+      
+      protected var _inventory:Inventory;
+      
+      protected var _achievementManager:AchievementManager;
+      
+      protected var _projectileWeaponFactory:ProjectileWeaponFactory;
+      
+      protected var _maxProjectileSlots:int = 6;
+      
+      public var hasSeenTutorial:Boolean = false;
+      
+      protected var _globalInventory:Inventory;
+      
+      public function PlayerController(param1:GameFactory, param2:MeleeWeaponFactory, param3:ProjectileWeaponFactory)
+      {
+         method
+            name null
+            param QName(PackageNamespace("com.whatthefawk"),"GameFactory")
+            param QName(PackageNamespace("com.whatthefawk.weapons.melee"),"MeleeWeaponFactory")
+            param QName(PackageNamespace("com.whatthefawk.weapons.projectile"),"ProjectileWeaponFactory")
+            returns null
+            
+            body
+               maxstack 3
+               localcount 4
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal0
+                  getlocal1
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_gameFactory")
+                  getlocal0
+                  getlocal2
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_meleeWeaponFactory")
+                  getlocal0
+                  getlocal3
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_projectileWeaponFactory")
+                  getlocal0
+                  getlex QName(PackageNamespace("com.getoffmyroof.engine"),"GameComponents")
+                  getproperty QName(PackageNamespace(""),"instance")
+                  pushstring "GlobalInventory"
+                  callproperty QName(PackageNamespace(""),"getComponent"), 1
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_globalInventory")
+                  getlocal0
+                  getlex QName(PackageNamespace("com.getoffmyroof.engine"),"GameComponents")
+                  getproperty QName(PackageNamespace(""),"instance")
+                  callproperty QName(PackageNamespace(""),"getAudioManager"), 0
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                  getlocal0
+                  getlex QName(PackageNamespace("com.getoffmyroof.engine"),"GameComponents")
+                  getproperty QName(PackageNamespace(""),"instance")
+                  pushstring "AchievementManager"
+                  callproperty QName(PackageNamespace(""),"getComponent"), 1
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_achievementManager")
+                  getlocal0
+                  findpropstrict QName(PackageNamespace("com.getoffmyroof.inventory"),"Inventory")
+                  constructprop QName(PackageNamespace("com.getoffmyroof.inventory"),"Inventory"), 0
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_inventory")
+                  getlocal0
+                  findpropstrict QName(PackageNamespace("com.getoffmyroof.inventory"),"Equipment")
+                  constructprop QName(PackageNamespace("com.getoffmyroof.inventory"),"Equipment"), 0
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  getlocal0
+                  findpropstrict QName(PackageNamespace("com.getoffmyroof.rewards"),"PlayerRewards")
+                  constructprop QName(PackageNamespace("com.getoffmyroof.rewards"),"PlayerRewards"), 0
+                  initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_playerRewards")
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "melee"
+                  callpropvoid QName(PackageNamespace(""),"addSlotGroup"), 1
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlotGroup"), 1
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "melee"
+                  pushstring "melee"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile_1"
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile_2"
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile_3"
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile_4"
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile_5"
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  getlocal0
+                  getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                  pushstring "projectile_6"
+                  pushstring "projectile"
+                  callpropvoid QName(PackageNamespace(""),"addSlot"), 2
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function update(param1:int) : void
+      {
+         trait method QName(PackageNamespace(""),"update")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 1
+                  localcount 2
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     getlocal0
+                     getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                     getproperty QName(PackageNamespace(""),"lifeSystem")
+                     getproperty QName(PackageNamespace(""),"isDead")
+                     iftrue ofs0015
+                     getlocal0
+                     callpropvoid QName(PackageNamespace(""),"handleInput"), 0
+            ofs0015:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function get equipment() : Equipment
+         {
+            trait getter QName(PackageNamespace(""),"equipment")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace("com.getoffmyroof.inventory"),"Equipment")
+                  
+                  body
+                     maxstack 1
+                     localcount 1
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        getlocal0
+                        getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function get maxProjectileSlots() : int
+            {
+               trait getter QName(PackageNamespace(""),"maxProjectileSlots")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"int")
+                     
+                     body
+                        maxstack 1
+                        localcount 1
+                        initscopedepth 5
+                        maxscopedepth 6
+                        
+                        code
+                           getlocal0
+                           pushscope
+                           getlocal0
+                           getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_maxProjectileSlots")
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function handleInput() : void
+               {
+                  trait method QName(PackageNamespace(""),"handleInput")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 4
+                           localcount 2
+                           initscopedepth 5
+                           maxscopedepth 6
+                           
+                           code
+                              getlocal0
+                              pushscope
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"Input")
+                              getproperty QName(PackageNamespace(""),"instance")
+                              coerce QName(PackageNamespace("com.whatthefawk.utils"),"Input")
+                              setlocal1
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"A")
+                              callproperty QName(PackageNamespace(""),"isKeyDown"), 1
+                              iffalse ofs0034
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              findpropstrict QName(PackageNamespace("com.whatthefawk.math"),"Vector2D")
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"maxForce")
+                              negate
+                              pushbyte 0
+                              constructprop QName(PackageNamespace("com.whatthefawk.math"),"Vector2D"), 2
+                              callpropvoid QName(PackageNamespace(""),"walk"), 1
+                              jump ofs0097
+                     ofs0034:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"D")
+                              callproperty QName(PackageNamespace(""),"isKeyDown"), 1
+                              iffalse ofs005d
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              findpropstrict QName(PackageNamespace("com.whatthefawk.math"),"Vector2D")
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"maxForce")
+                              pushbyte 0
+                              constructprop QName(PackageNamespace("com.whatthefawk.math"),"Vector2D"), 2
+                              callpropvoid QName(PackageNamespace(""),"walk"), 1
+                              jump ofs0097
+                     ofs005d:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"A")
+                              callproperty QName(PackageNamespace(""),"isKeyDown"), 1
+                              not
+                              dup
+                              iffalse ofs007b
+                              pop
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"D")
+                              callproperty QName(PackageNamespace(""),"isKeyDown"), 1
+                              not
+                     ofs007b:
+                              dup
+                              iffalse ofs0089
+                              pop
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"isInAir")
+                              not
+                     ofs0089:
+                              iffalse ofs0097
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              pushdouble 0.8
+                              callpropvoid QName(PackageNamespace(""),"stop"), 1
+                     ofs0097:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"SPACEBAR")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs00ae
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              callpropvoid QName(PackageNamespace(""),"jump"), 0
+                     ofs00ae:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"Q")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs00c5
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              callpropvoid QName(PackageNamespace(""),"useWetnap"), 0
+                     ofs00c5:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"W")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs00e0
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              callpropvoid QName(PackageNamespace(""),"activatePrimaryWeapon"), 0
+                              jump ofs00f7
+                     ofs00e0:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"W")
+                              callproperty QName(PackageNamespace(""),"isKeyReleased"), 1
+                              iffalse ofs00f7
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              callpropvoid QName(PackageNamespace(""),"deactivatePrimaryWeapon"), 0
+                     ofs00f7:
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"isMousePressed")
+                              iffalse ofs010b
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              callpropvoid QName(PackageNamespace(""),"activateSecondaryWeapon"), 0
+                              jump ofs011b
+                     ofs010b:
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"isMouseReleased")
+                              iffalse ofs011b
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              callpropvoid QName(PackageNamespace(""),"deactivateSecondaryWeapon"), 0
+                     ofs011b:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"ONE")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs013b
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                              pushbyte 1
+                              callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                              jump ofs01d7
+                     ofs013b:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"TWO")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs015b
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                              pushbyte 2
+                              callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                              jump ofs01d7
+                     ofs015b:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"THREE")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs017b
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                              pushbyte 3
+                              callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                              jump ofs01d7
+                     ofs017b:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"FOUR")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs019b
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                              pushbyte 4
+                              callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                              jump ofs01d7
+                     ofs019b:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"FIVE")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs01bb
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                              pushbyte 5
+                              callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                              jump ofs01d7
+                     ofs01bb:
+                              getlocal1
+                              getlex QName(PackageNamespace("com.whatthefawk.utils"),"KeyCode")
+                              getproperty QName(PackageNamespace(""),"SIX")
+                              callproperty QName(PackageNamespace(""),"isKeyPressed"), 1
+                              iffalse ofs01d7
+                              getlocal0
+                              getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                              getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                              pushbyte 6
+                              callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                     ofs01d7:
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function get inventory() : Inventory
+                  {
+                     trait getter QName(PackageNamespace(""),"inventory")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace("com.getoffmyroof.inventory"),"Inventory")
+                           
+                           body
+                              maxstack 1
+                              localcount 1
+                              initscopedepth 5
+                              maxscopedepth 6
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 getlocal0
+                                 getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_inventory")
+                                 returnvalue
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function resetPlayer() : void
+                     {
+                        trait method QName(PackageNamespace(""),"resetPlayer")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 1
+                                 localcount 1
+                                 initscopedepth 5
+                                 maxscopedepth 6
+                                 
+                                 code
+                                    getlocal0
+                                    pushscope
+                                    getlocal0
+                                    getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                    callpropvoid QName(PackageNamespace(""),"reset"), 0
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function loadEquipment() : void
+                        {
+                           trait method QName(PackageNamespace(""),"loadEquipment")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 3
+                                    localcount 8
+                                    initscopedepth 5
+                                    maxscopedepth 6
+                                    
+                                    code
+                                       getlocal0
+                                       pushscope
+                                       pushnull
+                                       coerce_s
+                                       setlocal 5
+                                       pushnull
+                                       coerce_s
+                                       setlocal 6
+                                       pushnull
+                                       coerce QName(PackageNamespace("com.whatthefawk.weapons.projectile"),"ProjectileWeapon")
+                                       setlocal 7
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                                       getlex QName(PackageNamespace("com.getoffmyroof.inventory"),"EquipmentSlotGroups")
+                                       getproperty QName(PackageNamespace(""),"MELEE")
+                                       callproperty QName(PackageNamespace(""),"getSlot"), 1
+                                       coerce_s
+                                       setlocal1
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_meleeWeaponFactory")
+                                       getlocal1
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                       callproperty QName(PackageNamespace(""),"getWeapon"), 2
+                                       coerce QName(PackageNamespace("com.whatthefawk.weapons.melee"),"MeleeWeapon")
+                                       setlocal2
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                       getproperty QName(PackageNamespace(""),"primaryWeaponSystem")
+                                       getlocal2
+                                       pushbyte 0
+                                       callpropvoid QName(PackageNamespace(""),"addWeapon"), 2
+                                       getlex QName(PackageNamespace("SWFStats"),"Log")
+                                       getlocal1
+                                       pushstring "Melee Weapons"
+                                       callpropvoid QName(PackageNamespace(""),"CustomMetric"), 2
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                                       getlex QName(PackageNamespace("com.getoffmyroof.inventory"),"EquipmentSlotGroups")
+                                       getproperty QName(PackageNamespace(""),"PROJECTILE")
+                                       callproperty QName(PackageNamespace(""),"getSlotGroup"), 1
+                                       coerce QName(PackageNamespace(""),"Array")
+                                       setlocal3
+                                       pushbyte 0
+                                       setlocal 4
+                                       jump ofs00af
+                              ofs0061:
+                                       label
+                                       getlocal3
+                                       getlocal 4
+                                       decrement
+                                       getproperty MultinameL([PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                       coerce_s
+                                       setlocal 5
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                                       getlocal 5
+                                       callproperty QName(PackageNamespace(""),"getSlot"), 1
+                                       coerce_s
+                                       dup
+                                       setlocal 6
+                                       iftrue ofs0082
+                                       jump ofs00af
+                              ofs0082:
+                                       getlex QName(PackageNamespace("SWFStats"),"Log")
+                                       getlocal 6
+                                       pushstring "Projectile Weapons"
+                                       callpropvoid QName(PackageNamespace(""),"CustomMetric"), 2
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_projectileWeaponFactory")
+                                       getlocal 6
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                       callproperty QName(PackageNamespace(""),"getWeapon"), 2
+                                       coerce QName(PackageNamespace("com.whatthefawk.weapons.projectile"),"ProjectileWeapon")
+                                       setlocal 7
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                       getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                                       getlocal 7
+                                       getlocal 4
+                                       callpropvoid QName(PackageNamespace(""),"addWeapon"), 2
+                              ofs00af:
+                                       getlocal 4
+                                       increment_i
+                                       dup
+                                       convert_i
+                                       setlocal 4
+                                       getlocal0
+                                       getproperty QName(PackageNamespace(""),"numProjectileSlots")
+                                       ifle ofs0061
+                                       getlocal0
+                                       getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                       getproperty QName(PackageNamespace(""),"secondaryWeaponSystem")
+                                       pushbyte 1
+                                       callpropvoid QName(PackageNamespace(""),"switchCurrentWeapon"), 1
+                                       returnvoid
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function get player() : Player
+                           {
+                              trait getter QName(PackageNamespace(""),"player")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace("com.getoffmyroof.entity"),"Player")
+                                    
+                                    body
+                                       maxstack 1
+                                       localcount 1
+                                       initscopedepth 5
+                                       maxscopedepth 6
+                                       
+                                       code
+                                          getlocal0
+                                          pushscope
+                                          getlocal0
+                                          getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                          returnvalue
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function loadValueObject(param1:IValueObject) : void
+                              {
+                                 trait method QName(PackageNamespace(""),"loadValueObject")
+                                    dispid 0
+                                    method
+                                       name null
+                                       param QName(PackageNamespace("com.getoffmyroof.save"),"IValueObject")
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 3
+                                          localcount 10
+                                          initscopedepth 5
+                                          maxscopedepth 6
+                                          
+                                          code
+                                             getlocal0
+                                             pushscope
+                                             pushnull
+                                             coerce_s
+                                             setlocal3
+                                             pushnull
+                                             coerce_s
+                                             setlocal 4
+                                             pushundefined
+                                             coerce_a
+                                             setlocal 5
+                                             pushundefined
+                                             coerce_a
+                                             setlocal 6
+                                             pushnull
+                                             coerce QName(PackageNamespace("com.getoffmyroof.rewards"),"LevelRewards")
+                                             setlocal 7
+                                             findpropstrict QName(PackageNamespace("com.getoffmyroof.save"),"PlayerVO")
+                                             getlocal1
+                                             callproperty QName(PackageNamespace("com.getoffmyroof.save"),"PlayerVO"), 1
+                                             coerce QName(PackageNamespace("com.getoffmyroof.save"),"PlayerVO")
+                                             setlocal2
+                                             getlocal2
+                                             iftrue ofs006a
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_inventory")
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_globalInventory")
+                                             pushstring "Newspaper"
+                                             callproperty QName(PackageNamespace(""),"getItem"), 1
+                                             callpropvoid QName(PackageNamespace(""),"addItem"), 1
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_inventory")
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_globalInventory")
+                                             pushstring "Rock"
+                                             callproperty QName(PackageNamespace(""),"getItem"), 1
+                                             callpropvoid QName(PackageNamespace(""),"addItem"), 1
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                                             pushstring "Newspaper"
+                                             pushstring "melee"
+                                             callpropvoid QName(PackageNamespace(""),"equip"), 2
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                                             pushstring "Rock"
+                                             pushstring "projectile_1"
+                                             callpropvoid QName(PackageNamespace(""),"equip"), 2
+                                             returnvoid
+                                    ofs006a:
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"globalVolume")
+                                             callpropvoid QName(PackageNamespace(""),"volumeTo"), 1
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                             getlex QName(PackageNamespace("com.whatthefawk.audio"),"AudioTypes")
+                                             getproperty QName(PackageNamespace(""),"MUSIC")
+                                             callproperty QName(PackageNamespace(""),"getSoundTransform"), 1
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"musicVolume")
+                                             setproperty QName(PackageNamespace(""),"volume")
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                             getlex QName(PackageNamespace("com.whatthefawk.audio"),"AudioTypes")
+                                             getproperty QName(PackageNamespace(""),"SOUND")
+                                             callproperty QName(PackageNamespace(""),"getSoundTransform"), 1
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"soundVolume")
+                                             setproperty QName(PackageNamespace(""),"volume")
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                             getlex QName(PackageNamespace("com.whatthefawk.audio"),"AudioTypes")
+                                             getproperty QName(PackageNamespace(""),"INTERFACE")
+                                             callproperty QName(PackageNamespace(""),"getSoundTransform"), 1
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"interfaceVolume")
+                                             setproperty QName(PackageNamespace(""),"volume")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"isMuted")
+                                             iffalse ofs00d1
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"globalVolumeBeforeMute")
+                                             callpropvoid QName(PackageNamespace(""),"volumeTo"), 1
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                             callpropvoid QName(PackageNamespace(""),"mute"), 0
+                                    ofs00d1:
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_achievementManager")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"achievements")
+                                             callpropvoid QName(PackageNamespace(""),"forceCompleteAchievements"), 1
+                                             getlocal0
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"hasSeenTutorial")
+                                             initproperty QName(PackageNamespace(""),"hasSeenTutorial")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"killTypes")
+                                             setproperty QName(PackageNamespace(""),"killTypes")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"totalKills")
+                                             setproperty QName(PackageNamespace(""),"totalKills")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"totalPoints")
+                                             setproperty QName(PackageNamespace(""),"totalPoints")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"highKills")
+                                             setproperty QName(PackageNamespace(""),"highKills")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"highCombo")
+                                             setproperty QName(PackageNamespace(""),"highCombo")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"highPoints")
+                                             setproperty QName(PackageNamespace(""),"highPoints")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"highKillsLevelID")
+                                             setproperty QName(PackageNamespace(""),"highKillsLevelID")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"highComboLevelID")
+                                             setproperty QName(PackageNamespace(""),"highComboLevelID")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"highPointsLevelID")
+                                             setproperty QName(PackageNamespace(""),"highPointsLevelID")
+                                             pushbyte 0
+                                             setlocal 8
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"equipment")
+                                             coerce_a
+                                             setlocal 9
+                                             jump ofs0170
+                                    ofs0157:
+                                             label
+                                             getlocal 9
+                                             getlocal 8
+                                             nextname
+                                             coerce_s
+                                             setlocal3
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_equipment")
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"equipment")
+                                             getlocal3
+                                             getproperty MultinameL([PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             getlocal3
+                                             callpropvoid QName(PackageNamespace(""),"equip"), 2
+                                    ofs0170:
+                                             hasnext2 9, 8
+                                             iftrue ofs0157
+                                             kill 9
+                                             kill 8
+                                             pushbyte 0
+                                             setlocal 8
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"inventory")
+                                             coerce_a
+                                             setlocal 9
+                                             jump ofs01aa
+                                    ofs018a:
+                                             label
+                                             getlocal 9
+                                             getlocal 8
+                                             nextvalue
+                                             coerce_s
+                                             setlocal 4
+                                             getlocal0
+                                             getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_globalInventory")
+                                             getlocal 4
+                                             callproperty QName(PackageNamespace(""),"getItem"), 1
+                                             coerce_a
+                                             setlocal 6
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"inventory")
+                                             getlocal 6
+                                             callpropvoid QName(PackageNamespace(""),"addItem"), 1
+                                    ofs01aa:
+                                             hasnext2 9, 8
+                                             iftrue ofs018a
+                                             kill 9
+                                             kill 8
+                                             pushbyte 0
+                                             setlocal 8
+                                             getlocal2
+                                             getproperty QName(PackageNamespace(""),"levels")
+                                             coerce_a
+                                             setlocal 9
+                                             jump ofs022f
+                                    ofs01c4:
+                                             label
+                                             getlocal 9
+                                             getlocal 8
+                                             nextvalue
+                                             coerce_a
+                                             setlocal 5
+                                             findpropstrict QName(PackageNamespace("com.getoffmyroof.rewards"),"LevelRewards")
+                                             constructprop QName(PackageNamespace("com.getoffmyroof.rewards"),"LevelRewards"), 0
+                                             coerce QName(PackageNamespace("com.getoffmyroof.rewards"),"LevelRewards")
+                                             dup
+                                             setlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("levelID",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"levelID")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("highKills",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"kills")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("highCombo",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"highCombo")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("highPoints",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"points")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("bestTime",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"time")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("medal",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"medal")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("numDeaths",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"numDeaths")
+                                             getlocal 7
+                                             getlocal 5
+                                             getproperty Multiname("isComplete",[PrivateNamespace(null,"287"),ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),PackageNamespace(""),PrivateNamespace(null,"288"),PackageNamespace("com.getoffmyroof.controllers"),PackageInternalNs("com.getoffmyroof.controllers"),Namespace("http://adobe.com/AS3/2006/builtin"),StaticProtectedNs("com.getoffmyroof.controllers:PlayerController"),StaticProtectedNs("flash.events:EventDispatcher"),StaticProtectedNs("Object")])
+                                             setproperty QName(PackageNamespace(""),"complete")
+                                             getlocal0
+                                             getproperty QName(PackageNamespace(""),"rewards")
+                                             getlocal 7
+                                             callpropvoid QName(PackageNamespace(""),"updateLevelRewards"), 1
+                                    ofs022f:
+                                             hasnext2 9, 8
+                                             iftrue ofs01c4
+                                             kill 9
+                                             kill 8
+                                             returnvoid
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public function getValueObject() : IValueObject
+                                 {
+                                    trait method QName(PackageNamespace(""),"getValueObject")
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns QName(PackageNamespace("com.getoffmyroof.save"),"IValueObject")
+                                          
+                                          body
+                                             maxstack 3
+                                             localcount 7
+                                             initscopedepth 5
+                                             maxscopedepth 6
+                                             
+                                             code
+                                                getlocal0
+                                                pushscope
+                                                pushnull
+                                                coerce QName(PackageNamespace("com.getoffmyroof.rewards"),"LevelRewards")
+                                                setlocal3
+                                                pushnull
+                                                coerce QName(PackageNamespace("com.getoffmyroof.save"),"LevelVO")
+                                                setlocal 4
+                                                findpropstrict QName(PackageNamespace("com.getoffmyroof.save"),"PlayerVO")
+                                                constructprop QName(PackageNamespace("com.getoffmyroof.save"),"PlayerVO"), 0
+                                                coerce QName(PackageNamespace("com.getoffmyroof.save"),"PlayerVO")
+                                                setlocal1
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"killTypes")
+                                                setproperty QName(PackageNamespace(""),"killTypes")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"totalKills")
+                                                setproperty QName(PackageNamespace(""),"totalKills")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"totalPoints")
+                                                setproperty QName(PackageNamespace(""),"totalPoints")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"highKills")
+                                                setproperty QName(PackageNamespace(""),"highKills")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"highCombo")
+                                                setproperty QName(PackageNamespace(""),"highCombo")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"highPoints")
+                                                setproperty QName(PackageNamespace(""),"highPoints")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"highKillsLevelID")
+                                                setproperty QName(PackageNamespace(""),"highKillsLevelID")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"highComboLevelID")
+                                                setproperty QName(PackageNamespace(""),"highComboLevelID")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"highPointsLevelID")
+                                                setproperty QName(PackageNamespace(""),"highPointsLevelID")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"equipment")
+                                                getproperty QName(PackageNamespace(""),"slots")
+                                                setproperty QName(PackageNamespace(""),"equipment")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"inventory")
+                                                getproperty QName(PackageNamespace(""),"itemIDs")
+                                                setproperty QName(PackageNamespace(""),"inventory")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_achievementManager")
+                                                getproperty QName(PackageNamespace(""),"completedAchievementIDs")
+                                                setproperty QName(PackageNamespace(""),"achievements")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                                callproperty QName(PackageNamespace(""),"getSoundTransform"), 0
+                                                getproperty QName(PackageNamespace(""),"volume")
+                                                setproperty QName(PackageNamespace(""),"globalVolume")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                                getlex QName(PackageNamespace("com.whatthefawk.audio"),"AudioTypes")
+                                                getproperty QName(PackageNamespace(""),"MUSIC")
+                                                callproperty QName(PackageNamespace(""),"getSoundTransform"), 1
+                                                getproperty QName(PackageNamespace(""),"volume")
+                                                setproperty QName(PackageNamespace(""),"musicVolume")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                                getlex QName(PackageNamespace("com.whatthefawk.audio"),"AudioTypes")
+                                                getproperty QName(PackageNamespace(""),"SOUND")
+                                                callproperty QName(PackageNamespace(""),"getSoundTransform"), 1
+                                                getproperty QName(PackageNamespace(""),"volume")
+                                                setproperty QName(PackageNamespace(""),"soundVolume")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                                getlex QName(PackageNamespace("com.whatthefawk.audio"),"AudioTypes")
+                                                getproperty QName(PackageNamespace(""),"INTERFACE")
+                                                callproperty QName(PackageNamespace(""),"getSoundTransform"), 1
+                                                getproperty QName(PackageNamespace(""),"volume")
+                                                setproperty QName(PackageNamespace(""),"interfaceVolume")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                                getproperty QName(PackageNamespace(""),"isMuted")
+                                                setproperty QName(PackageNamespace(""),"isMuted")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_audioManager")
+                                                getproperty QName(PackageNamespace(""),"globalVolumeBeforeMute")
+                                                setproperty QName(PackageNamespace(""),"globalVolumeBeforeMute")
+                                                getlocal1
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"hasSeenTutorial")
+                                                setproperty QName(PackageNamespace(""),"hasSeenTutorial")
+                                                newarray 0
+                                                coerce QName(PackageNamespace(""),"Array")
+                                                setlocal2
+                                                pushbyte 0
+                                                setlocal 5
+                                                getlocal0
+                                                getproperty QName(PackageNamespace(""),"rewards")
+                                                getproperty QName(PackageNamespace(""),"levelRewards")
+                                                coerce_a
+                                                setlocal 6
+                                                jump ofs0181
+                                       ofs011e:
+                                                label
+                                                getlocal 6
+                                                getlocal 5
+                                                nextvalue
+                                                coerce QName(PackageNamespace("com.getoffmyroof.rewards"),"LevelRewards")
+                                                setlocal3
+                                                findpropstrict QName(PackageNamespace("com.getoffmyroof.save"),"LevelVO")
+                                                constructprop QName(PackageNamespace("com.getoffmyroof.save"),"LevelVO"), 0
+                                                coerce QName(PackageNamespace("com.getoffmyroof.save"),"LevelVO")
+                                                dup
+                                                setlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"levelID")
+                                                setproperty QName(PackageNamespace(""),"levelID")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"kills")
+                                                setproperty QName(PackageNamespace(""),"highKills")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"highCombo")
+                                                setproperty QName(PackageNamespace(""),"highCombo")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"points")
+                                                setproperty QName(PackageNamespace(""),"highPoints")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"time")
+                                                setproperty QName(PackageNamespace(""),"bestTime")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"medal")
+                                                setproperty QName(PackageNamespace(""),"medal")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"numDeaths")
+                                                setproperty QName(PackageNamespace(""),"numDeaths")
+                                                getlocal 4
+                                                getlocal3
+                                                getproperty QName(PackageNamespace(""),"complete")
+                                                setproperty QName(PackageNamespace(""),"isComplete")
+                                                getlocal2
+                                                getlocal 4
+                                                callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                                       ofs0181:
+                                                hasnext2 6, 5
+                                                iftrue ofs011e
+                                                kill 6
+                                                kill 5
+                                                getlocal1
+                                                getlocal2
+                                                setproperty QName(PackageNamespace(""),"levels")
+                                                getlocal1
+                                                returnvalue
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public function get rewards() : PlayerRewards
+                                    {
+                                       trait getter QName(PackageNamespace(""),"rewards")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns QName(PackageNamespace("com.getoffmyroof.rewards"),"PlayerRewards")
+                                             
+                                             body
+                                                maxstack 1
+                                                localcount 1
+                                                initscopedepth 5
+                                                maxscopedepth 6
+                                                
+                                                code
+                                                   getlocal0
+                                                   pushscope
+                                                   getlocal0
+                                                   getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_playerRewards")
+                                                   returnvalue
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public function loadPlayer(param1:String = null) : Player
+                                       {
+                                          trait method QName(PackageNamespace(""),"loadPlayer")
+                                             dispid 0
+                                             method
+                                                name null
+                                                flag HAS_OPTIONAL
+                                                param QName(PackageNamespace(""),"String")
+                                                optional Null()
+                                                returns QName(PackageNamespace("com.getoffmyroof.entity"),"Player")
+                                                
+                                                body
+                                                   maxstack 3
+                                                   localcount 3
+                                                   initscopedepth 5
+                                                   maxscopedepth 6
+                                                   
+                                                   code
+                                                      getlocal0
+                                                      pushscope
+                                                      getlocal1
+                                                      iffalse ofs000d
+                                                      getlocal1
+                                                      coerce_s
+                                                      jump ofs0012
+                                             ofs000d:
+                                                      getlocal0
+                                                      getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_playerID")
+                                                      coerce_s
+                                             ofs0012:
+                                                      coerce_s
+                                                      setlocal2
+                                                      getlocal0
+                                                      getlocal0
+                                                      getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_gameFactory")
+                                                      getlocal2
+                                                      callproperty QName(PackageNamespace(""),"getEntity"), 1
+                                                      initproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                                      getlocal0
+                                                      getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_player")
+                                                      returnvalue
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                          
+                                          public function get numProjectileSlots() : int
+                                          {
+                                             trait getter QName(PackageNamespace(""),"numProjectileSlots")
+                                                dispid 0
+                                                method
+                                                   name null
+                                                   returns QName(PackageNamespace(""),"int")
+                                                   
+                                                   body
+                                                      maxstack 1
+                                                      localcount 1
+                                                      initscopedepth 5
+                                                      maxscopedepth 6
+                                                      
+                                                      code
+                                                         getlocal0
+                                                         pushscope
+                                                         getlocal0
+                                                         getproperty QName(ProtectedNamespace("com.getoffmyroof.controllers:PlayerController"),"_numProjectileSlots")
+                                                         returnvalue
+                                                      end ; code
+                                                   end ; body
+                                                end ; method
+                                             }
+                                          }
+                                       }
+                                       
+                                       method
+                                          name null
+                                          returns null
+                                          
+                                          body
+                                             maxstack 2
+                                             localcount 1
+                                             initscopedepth 1
+                                             maxscopedepth 4
+                                             
+                                             code
+                                                getlocal0
+                                                pushscope
+                                                findpropstrict Multiname("PlayerController",[PackageNamespace("com.getoffmyroof.controllers")])
+                                                getlex QName(PackageNamespace(""),"Object")
+                                                pushscope
+                                                getlex QName(PackageNamespace("flash.events"),"EventDispatcher")
+                                                pushscope
+                                                getlex QName(PackageNamespace("flash.events"),"EventDispatcher")
+                                                newclass 207
+                                                popscope
+                                                popscope
+                                                initproperty QName(PackageNamespace("com.getoffmyroof.controllers"),"PlayerController")
+                                                returnvoid
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                       

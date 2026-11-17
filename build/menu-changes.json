@@ -1,0 +1,40 @@
+{
+  "hiddenButtons": {
+    "335": "Play More Games (pause/results)",
+    "347": "Add This Game to Your Website",
+    "349": "Play More Games",
+    "353": "Credits"
+  },
+  "placements": [
+    {
+      "parent": 345,
+      "characterId": 335,
+      "depth": 5
+    },
+    {
+      "parent": 363,
+      "characterId": 353,
+      "depth": 4
+    },
+    {
+      "parent": 363,
+      "characterId": 349,
+      "depth": 14
+    },
+    {
+      "parent": 363,
+      "characterId": 347,
+      "depth": 16
+    },
+    {
+      "parent": 510,
+      "characterId": 335,
+      "depth": 3
+    },
+    {
+      "parent": 516,
+      "characterId": 335,
+      "depth": 3
+    }
+  ]
+}
