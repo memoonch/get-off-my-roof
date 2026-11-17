@@ -1,0 +1,76 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 942" itemID="6afc4180-0000023d" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 942">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#e2de0a">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 941" centerPoint3DX="47.75" centerPoint3DY="48.5">
+                                             <matrix>
+                                                  <Matrix tx="2.65" ty="3.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color redMultiplier="0.0" greenMultiplier="0.0" blueMultiplier="0.0" alphaMultiplier="0.1484375" redOffset="255" greenOffset="255" blueOffset="255"/>
+                                             </color>
+                                             <filters>
+                                                  <BlurFilter blurX="15" blurY="15" quality="1"/>
+                                             </filters>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#56ddbf" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#cccccc" alpha="1.0"/>
+                                                  </FillStyle>
+                                                  <FillStyle index="2">
+                                                       <SolidColor color="#737373" alpha="1.0"/>
+                                                  </FillStyle>
+                                                  <FillStyle index="3">
+                                                       <SolidColor color="#333333" alpha="1.0"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes>
+                                                  <StrokeStyle index="1">
+                                                       <SolidStroke weight="1.0" scaleMode="normal">
+                                                            <fill>
+                                                                 <SolidColor color="#000000" alpha="0.5019608"/>
+                                                            </fill>
+                                                       </SolidStroke>
+                                                  </StrokeStyle>
+                                                  <StrokeStyle index="2">
+                                                       <SolidStroke weight="1.0" scaleMode="normal">
+                                                            <fill>
+                                                                 <SolidColor color="#000000" alpha="0.101960786"/>
+                                                            </fill>
+                                                       </SolidStroke>
+                                                  </StrokeStyle>
+                                             </strokes>
+                                             <edges>
+                                                  <Edge fillStyle0="1" fillStyle1="0" strokeStyle="1" edges="! 935 955[ 945 945 958 945[ 971 945 981 955[ 990 964 990 977[ 990 991 981 1000[ 971 1010 958 1010[ 945 1010 935 1000[ 926 991 926 977[ 926 964 935 955"/>
+                                                  <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="! 1165 763[ 1251 848 1251 969[ 1251 1091 1165 1177[ 1080 1263 959 1263[ 837 1263 751 1177[ 665 1091 665 969[ 665 848 751 763[ 837 677 959 677[ 1080 677 1165 763"/>
+                                                  <Edge fillStyle0="3" fillStyle1="2" strokeStyle="1" edges="! 1210 716[ 1315 820 1315 968[ 1315 1117 1210 1222[ 1106 1327 957 1327[ 809 1327 704 1222[ 599 1117 599 968[ 599 820 704 716[ 809 611 957 611[ 1106 611 1210 716"/>
+                                                  <Edge fillStyle0="3" fillStyle1="3" strokeStyle="2" edges="! 1578 974[ 1578 1235 1394 1419[ 1210 1601 951 1601[ 691 1601 507 1419[ 324 1235 324 974[ 324 715 507 531[ 691 347 951 347[ 1210 347 1394 531[ 1578 715 1578 974"/>
+                                                  <Edge fillStyle0="3" fillStyle1="3" strokeStyle="2" edges="! 1415 974[ 1415 1167 1280 1303[ 1144 1439 951 1439[ 759 1439 623 1303[ 487 1167 487 974[ 487 782 623 646[ 759 510 951 510[ 1144 510 1280 646[ 1415 782 1415 974"/>
+                                                  <Edge fillStyle0="0" fillStyle1="3" strokeStyle="1" edges="! 1600 324[ 1864 588 1864 962[ 1864 1336 1600 1600[ 1336 1864 962 1864[ 588 1864 324 1600[ 60 1336 60 962[ 60 588 324 324[ 588 60 962 60[ 1336 60 1600 324"/>
+                                                  <Edge fillStyle0="3" fillStyle1="3" strokeStyle="2" edges="! 1511 418[ 1743 648 1743 976[ 1743 1302 1511 1533[ 1281 1763 954 1763[ 628 1763 398 1533[ 167 1302 167 976[ 167 648 398 418[ 628 187 954 187[ 1281 187 1511 418"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

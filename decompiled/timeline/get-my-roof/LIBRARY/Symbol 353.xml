@@ -1,0 +1,29 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 353" itemID="6afc4180-00000114" lastModified="1794213954" linkageClassName="btn_credits_class" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 353">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#a4d8c5" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText left="0" antiAliasSharpness="0" antiAliasThickness="0" width="720" height="383" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="-34.95" ty="-13.3"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>Credits</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs aliasText="false" rotation="true" size="22.5" bitmapSize="450" letterSpacing="0" indent="0" leftMargin="0" lineSpacing="0" rightMargin="0" fillColor="#333333" face="Playtime With Hot Toddies"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

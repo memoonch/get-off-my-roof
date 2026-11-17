@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 177" itemID="6afc4180-000000c8" lastModified="1794213954" symbolType="graphic">
+     <timeline>
+          <DOMTimeline name="Symbol 177" currentFrame="0">
+               <layers>
+                    <DOMLayer name="Layer 1">
+                         <frames>
+                              <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#ffffff"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes/>
+                                             <edges>
+                                                  <Edge fillStyle0="0" fillStyle1="1" strokeStyle="0" edges="! 5060 4580| 5220 5240[ 5300 5600 5160 5860[ 5000 6120 4500 6060[ 3980 6000 3980 5100[ 3980 4200 4160 3860[ 4340 3540 4340 3040[ 4340 2200 3920 2180[ 3500 2140 3460 2520[ 3420 2880 3500 3160[ 3560 3420 3420 3740[ 3260 4040 2980 4020[ 2680 3980 2540 3620[ 2380 3240 2440 2580[ 2480 1920 2260 2060| 2120 2400[ 2060 2640 2060 3520[ 2060 4560 2280 5040[ 2500 5520 2500 6180[ 2500 6740 1980 6760[ 1440 6760 1220 6340[ 1000 5920 1060 5680| 1120 5100| 1200 4440[ 1260 4140 800 3560[ 340 2980 340 2220[ 340 1580 720 1120[ 1060 680 1480 680| 1840 740| 2200 780| 2880 600[ 3220 400 3520 400[ 3720 400 3940 620| 4220 820| 5020 820[ 5600 920 5800 1100[ 6000 1300 6000 1760[ 6000 2180 5480 2760[ 4960 3360 4960 4060| 5060 4580"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2">
+                         <frames>
+                              <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <BitmapFill bitmapPath="Bitmap 176.png" bitmapIsClipped="true">
+                                                            <matrix>
+                                                                 <Matrix tx="0.0" ty="0.0" a="400.0" d="400.0"/>
+                                                            </matrix>
+                                                       </BitmapFill>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes/>
+                                             <edges>
+                                                  <Edge fillStyle0="0" fillStyle1="1" strokeStyle="0" edges="! 6400 0| 12800 0| 12800 6400| 6400 6400| 6400 0"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

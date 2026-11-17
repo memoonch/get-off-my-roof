@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 467" itemID="6afc4180-00000152" lastModified="1794213954" linkageClassName="com.getoffmyroof.screens.SponsorScreen" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 467">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#e4f55c">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 466" name="temp_sponsor_logo" centerPoint3DX="325.05" centerPoint3DY="15.15">
+                                             <matrix>
+                                                  <Matrix tx="202.9" ty="-0.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color alphaMultiplier="0.0"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#64a6cc" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 251" name="background" centerPoint3DX="319.95" centerPoint3DY="239.95">
+                                             <matrix>
+                                                  <Matrix tx="-1.0" ty="-1.0"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

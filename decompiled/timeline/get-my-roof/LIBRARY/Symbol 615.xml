@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 615" itemID="6afc4180-000001a1" lastModified="1794213954" linkageClassName="PoolStickAnimations" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 615">
+               <layers>
+                    <DOMLayer name="Labels Layer" color="#9fc9f3">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728" name="IdleAnimationStart" labelType="name">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" keyMode="9728" name="IdleAnimationEnd" labelType="name">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#8cc4be" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="2" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 614" centerPoint3DX="130.2" centerPoint3DY="6.1">
+                                             <matrix>
+                                                  <Matrix tx="0.0" ty="2.2" a="0.64703369140625" d="-0.64703369140625"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,27 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 908" itemID="6afc4180-0000022f" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 908">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#e6e462" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#515151"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes/>
+                                             <edges>
+                                                  <Edge fillStyle0="0" fillStyle1="1" strokeStyle="0" edges="! 487 437[ 462 437 447 423| 428 408| 404 421[ 384 434 370 434| 356 433| 352 420[ 352 412 362 398| 375 384| 375 364| 374 364| 341 394[ 311 419 287 419[ 280 419 279 404| 280 384| 235 382[ 211 381 202 372| 194 339[ 192 329 174 331| 156 334| 124 326[ 91 313 91 287| 88 276[ -26 288 8 196[ 205 171 282 0| 659 21[ 729 197 894 279[ 871 354 802 338[ 809 360 785 384[ 761 409 735 409| 713 403| 701 397[ 628 445 627 426| 629 425| 627 425[ 603 425 587 413[ 571 401 566 401[ 559 401 537 419[ 516 437 487 437"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

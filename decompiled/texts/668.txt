@@ -1,0 +1,1 @@
+2. To UNequip an item left-Click the item in the Equipment slot on the right.

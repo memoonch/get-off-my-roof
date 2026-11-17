@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level>
+	<name>
+		Day Two
+	</name>
+	
+	<description>
+	</description>
+	
+	<sky>sky1</sky>
+	<house>house1</house>
+	
+	<groups>
+		<group id="1">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="3"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>2</groupID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="2">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="6"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>3</groupID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="3">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="9"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>4</groupID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="4">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="12"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>5</groupID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="5">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="15"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>6</groupID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="6">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="18"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>7</groupID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="7">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="21"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SelectLevelAction">
+					<levelID>level003</levelID>
+				</action>		
+			</trigger>
+		</group>
+	</groups>
+</level>

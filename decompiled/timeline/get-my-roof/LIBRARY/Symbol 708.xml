@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 708" itemID="6afc4180-000001d6" lastModified="1794213954" linkageClassName="ui_pigeon_kills_box" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 708">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#ab86e7">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMDynamicText fontRenderingMode="device" name="text" antiAliasSharpness="0" antiAliasThickness="0" width="201.15" height="12.05" renderAsHTML="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="10.85" ty="1.1"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>Soldier Brown Pigeon: 10000000</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="left" rotation="true" indent="0.0" leftMargin="0.0" autoKern="true" letterSpacing="1.0" lineSpacing="2.0" rightMargin="0.0" size="9" bitmapSize="180" face="Verdana Bold" fillColor="#000000"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMDynamicText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#bf967e" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#ffffff" alpha="0.7019608"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes/>
+                                             <edges>
+                                                  <Edge fillStyle0="1" fillStyle1="0" strokeStyle="0" edges="! 4440 148[ 4440 0 4240 0| 200 0[ 0 0 0 148[ 0 296 200 296| 4240 296[ 4440 296 4440 148"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

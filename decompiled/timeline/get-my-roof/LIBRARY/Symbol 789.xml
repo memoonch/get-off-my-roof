@@ -1,0 +1,27 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 789" itemID="6afc4180-000001fa" lastModified="1794213954" linkageClassName="com.getoffmyroof.assets.Assets_YOYO_SPRITE" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 789">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#fcbc19" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 788" centerPoint3DX="15.55" centerPoint3DY="15.55">
+                                             <matrix>
+                                                  <Matrix tx="0.0" ty="0.0" a="0.51776123046875" d="0.51776123046875"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <filters>
+                                                  <BevelFilter blurX="3" blurY="3" quality="3" angle="44.999253346524966" distance="1.0" highlightColor="#ffffff" shadowColor="#000000" strength="0.75"/>
+                                             </filters>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

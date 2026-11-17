@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 603" itemID="6afc4180-00000198" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 603">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#7d45f5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 602" centerPoint3DX="79.9" centerPoint3DY="75.65">
+                                             <matrix>
+                                                  <Matrix tx="69.8" ty="61.9" a="0.7317962646484375" d="0.7317962646484375"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <filters>
+                                                  <BevelFilter blurX="5" blurY="5" quality="1" angle="44.999253346524966" distance="5.0" highlightColor="#ffffff" shadowColor="#000000" strength="0.2"/>
+                                             </filters>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#fa51e2" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#333333" alpha="0.40392157"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes/>
+                                             <edges>
+                                                  <Edge fillStyle0="1" fillStyle1="0" strokeStyle="0" edges="! 1660 0| 200 0[ 0 0 0 200| 0 1580[ 0 1780 200 1780| 1660 1780[ 1860 1780 1860 1580| 1860 200[ 1860 0 1660 0"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

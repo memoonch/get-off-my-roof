@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 154" itemID="6afc4180-000000bc" lastModified="1794213954" linkageClassName="com.getoffmyroof.engine.GameEngine" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 154">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#bbcb74" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="1" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

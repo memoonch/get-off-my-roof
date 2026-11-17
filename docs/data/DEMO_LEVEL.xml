@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level>
+	<name>
+		Demo Level
+	</name>
+	
+	<description>
+		Demo level for testing.
+	</description>
+	
+	<sky>sky1</sky>
+	<house>house1</house>
+	
+	<droppers>
+	</droppers>	
+		
+	<groups>
+		<group id="a">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>b</groupID>
+				</action>
+			</trigger>
+			<spawner type="PigeonSpawner" entity="BomberPigeon" num="12"></spawner>
+		</group>
+		
+		<group id="b">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>c</groupID>
+				</action>
+			</trigger>
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="3"></spawner>
+		</group>
+		
+		<group id="c">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>d</groupID>
+				</action>
+			</trigger>
+			<spawner type="PigeonSpawner" entity="SoldierPigeon" num="3"></spawner>
+		</group>
+		
+		<group id="d">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>e</groupID>
+				</action>
+			</trigger>
+			<spawner type="PigeonSpawner" entity="CrazyPigeon" num="3"></spawner>
+		</group>
+		
+		<group id="e">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>a</groupID>
+				</action>
+			</trigger>
+			<spawner type="PigeonSpawner" entity="BomberPigeon" num="3"></spawner>
+		</group>
+		
+	</groups>
+</level>

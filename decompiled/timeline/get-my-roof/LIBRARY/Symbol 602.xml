@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 602" itemID="6afc4180-00000197" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 602">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#c582c0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 601" centerPoint3DX="10.75" centerPoint3DY="19.75">
+                                             <matrix>
+                                                  <Matrix tx="7.35" ty="13.8" a="0.7210235595703125" d="0.7210235595703125"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color redMultiplier="0.6015625" greenMultiplier="0.6015625" blueMultiplier="0.6015625" redOffset="102" greenOffset="82"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#a68ef5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 599" centerPoint3DX="14.1" centerPoint3DY="21.9">
+                                             <matrix>
+                                                  <Matrix tx="0.05" ty="9.2" a="0.7210235595703125" d="0.7210235595703125"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color redMultiplier="0.30078125" greenMultiplier="0.30078125" blueMultiplier="0.30078125" redOffset="179" greenOffset="143"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#507aba" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 597" centerPoint3DX="13.2" centerPoint3DY="8.2">
+                                             <matrix>
+                                                  <Matrix tx="2.45" ty="0.0" a="0.7210235595703125" d="0.7210235595703125"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

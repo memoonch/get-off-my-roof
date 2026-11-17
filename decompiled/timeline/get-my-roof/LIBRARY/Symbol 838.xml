@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 838" itemID="6afc4180-00000214" lastModified="1794213954" linkageClassName="com.getoffmyroof.assets.Assets_NUMCHUCK_ANIMATIONS" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 838">
+               <layers>
+                    <DOMLayer name="Labels Layer" color="#caed1e">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728" name="IdleAnimationStart" labelType="name">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" keyMode="9728" name="IdleAnimationEnd" labelType="name">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#d1edb9" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="2" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 837" centerPoint3DX="79.5" centerPoint3DY="12.65">
+                                             <matrix>
+                                                  <Matrix tx="0.0" ty="-16.45" a="0.578582763671875" d="0.578582763671875"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 1015" itemID="6afc4180-0000025d" lastModified="1794213954" linkageClassName="com.getoffmyroof.assets.Assets_BIG_ROCK_SPRITE" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 1015">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#e990bf" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#959595" alpha="1.0"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes>
+                                                  <StrokeStyle index="1">
+                                                       <SolidStroke weight="1.0" scaleMode="normal">
+                                                            <fill>
+                                                                 <SolidColor color="#4d4d4d" alpha="0.7019608"/>
+                                                            </fill>
+                                                       </SolidStroke>
+                                                  </StrokeStyle>
+                                                  <StrokeStyle index="2">
+                                                       <SolidStroke weight="0.1" scaleMode="normal">
+                                                            <fill>
+                                                                 <SolidColor color="#8c8c8c"/>
+                                                            </fill>
+                                                       </SolidStroke>
+                                                  </StrokeStyle>
+                                             </strokes>
+                                             <edges>
+                                                  <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="! 197 295[ 233 272 253 272| 280 279| 318 287[ 334 287 349 268| 371 230"/>
+                                                  <Edge fillStyle0="1" fillStyle1="0" strokeStyle="1" edges="! 356 57| 317 28[ 313 22 302 20| 287 15[ 272 3 269 2| 243 0[ 42 0 0 155| 2 165[ -3 197 10 245[ 20 280 33 306[ 47 333 83 334| 136 331| 166 339| 201 347| 250 350| 296 353[ 325 353 359 328| 370 320[ 410 296 417 273| 420 205| 417 139[ 411 109 381 88[ 374 72 356 57"/>
+                                                  <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="! 256 51[ 271 55 278 70| 287 98[ 293 111 309 111| 338 112"/>
+                                                  <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="! 72 155[ 74 198 88 205[ 102 211 102 236[ 102 255 93 260"/>
+                                                  <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="! 133 70[ 147 56 154 57"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<items>
+	
+	<!-- Melee -->
+	
+	<item>
+		<id>Newspaper</id>
+		<name>Newspaper</name>
+		<type>melee</type>
+		<info>The Newspaper industry might be dying, but you certianly found a good use for this one.</info>
+		<reach>short</reach>
+		<damage>1</damage>
+		<icon>NEWSPAPER_ICON</icon>
+		<value>0</value>
+	</item>
+	<item>
+		<id>Broom</id>
+		<name>Broom</name>
+		<type>melee</type>
+		<info>Zora Neale Hurston told me to grab the broom of anger and drive off the beast of fear, now I get it!</info>
+		<reach>long</reach>
+		<damage>1</damage>
+		<icon>BROOM_ICON</icon>
+		<value>5000</value>
+	</item>
+	<item>
+		<id>GolfClub</id>
+		<name>Golf Club</name>
+		<type>melee</type>
+		<info>They say there's nothing more satisfying than getting a hole in one, I beg to differ.</info>
+		<reach>medium</reach>
+		<damage>2</damage>
+		<icon>GOLF_CLUB_ICON</icon>
+		<value>10000</value>
+	</item>
+	<item>
+		<id>Mop</id>
+		<name>Mop</name>
+		<type>melee</type>
+		<info>Time to for this seasoned mop to clean up a new type of mess, when a pigeon is hit by the mop they become wet, slowing them down.</info>
+		<reach>long</reach>
+		<damage>2 + Wetness</damage>
+		<icon>MOP_ICON</icon>
+		<value>20000</value>
+	</item>
+	<item>
+		<id>Rake</id>
+		<name>Rake</name>
+		<type>melee</type>
+		<info>Leaves... Pigeons... What's the difference? They both attack from above and are hard to clean up after.</info>
+		<reach>long + wide</reach>
+		<damage>1</damage>
+		<icon>RAKE_ICON</icon>
+		<value>20000</value>
+	</item>
+	<item>
+		<id>BaseballBat</id>
+		<name>Baseball Bat</name>
+		<type>melee</type>
+		<info>Baseball just got a lot more interesting, knock those Pigeons out of the park with this hard hitter.</info>
+		<reach>medium</reach>
+		<damage>3</damage>
+		<icon>BASEBALL_BAT_ICON</icon>
+		<value>30000</value>
+	</item>
+	<item>
+		<id>PoolStick</id>
+		<name>Pool Stick</name>
+		<type>melee</type>
+		<info>Pigeon ball, sky pocket. Pool is 90% mental, 10% physical and now; it's 100% personal.</info>
+		<reach>very long</reach>
+		<damage>1</damage>
+		<icon>POOL_STICK_ICON</icon>
+		<value>40000</value>
+	</item>
+	<item>
+		<id>Numchucks</id>
+		<name>Numchucks</name>
+		<type>melee</type>
+		<info>Time to go ninja on these pigeons. The Numchucks enable double jump, effectively transforming you into a high flying pigeon eliminating machine.</info>
+		<reach>short</reach>
+		<damage>4</damage>
+		<icon>NUMCHUCK_ICON</icon>
+		<value>50000</value>
+	</item>
+	<item>
+		<id>Shovel</id>
+		<name>Shovel</name>
+		<type>melee</type>
+		<info>Any pigeon that gets in the way of this grave digger is sure to be K.O.ed; but the shovel is heavy so it will slow you down.</info>
+		<reach>long</reach>
+		<damage>4</damage>
+		<icon>SHOVEL_ICON</icon>
+		<value>100000</value>
+	</item>
+	
+	<!-- End Melee -->
+	
+	
+	<!-- Projectile -->
+	
+	<item>
+		<id>Rock</id>
+		<name>Rock</name>
+		<type>projectile</type>
+		<info>The Rock is your ol' reliable. With good aim it never fails to get rid of pigeons.</info>
+		<damage>1</damage>
+		<direction>up</direction>
+		<icon>ROCK_ICON</icon>
+		<value>0</value>
+	</item>
+	<item>
+		<id>HandFullOfRocks</id>
+		<name>Hand Full Of Rocks</name>
+		<type>projectile</type>
+		<info>Throw a Hand FULL of Rocks, good for taking out a cluster of low flying pigeons.</info>
+		<damage>1</damage>
+		<direction>up</direction>
+		<icon>HAND_FULL_OF_ROCKS_ICON</icon>
+		<value>5000</value>
+	</item>
+	<item>
+		<id>TennisBall</id>
+		<name>Tennis Ball</name>
+		<type>projectile</type>
+		<info>The Tennis Ball is very bouncy, when it hits a pigeon it always bounces up.</info>
+		<damage>1</damage>
+		<direction>up</direction>
+		<icon>TENNIS_BALL_ICON</icon>
+		<value>20000</value>
+	</item>
+	<item>
+		<id>WaterBalloon</id>
+		<name>Water Balloon</name>
+		<type>projectile</type>
+		<info>The Water Balloon explodes on contact getting all nearby pigeons wet. Wet pigeons fly much slower and can't land until they dry off.</info>
+		<damage>1</damage>
+		<explosionDamage>Wetness</explosionDamage>
+		<direction>up</direction>
+		<icon>WATER_BALLOON_ICON</icon>
+		<value>20000</value>
+	</item>
+	<item>
+		<id>YoYo</id>
+		<name>Yo-Yo</name>
+		<type>projectile</type>
+		<info>They said all those years of practice with the Yo-Yo as a child would never pay off... Well you'll show them!</info>
+		<damage>1</damage>
+		<direction>at mouse</direction>
+		<icon>YOYO_ICON</icon>
+		<value>30000</value>
+	</item>
+	<item>
+		<id>VinylRecord</id>
+		<name>Vinyl Record</name>
+		<type>projectile</type>
+		<info>The Vinyl Record has a very wild flight pattern and shatters when it hits anything, but you can throw so many so fast that it doesn't even really matter.</info>
+		<damage>1</damage>
+		<direction>at mouse</direction>
+		<icon>VINYL_RECORD_ICON</icon>
+		<value>40000</value>
+	</item>
+	<item>
+		<id>Firecracker</id>
+		<name>Firecracker</name>
+		<type>projectile</type>
+		<info>The Firecracker explodes on contact, the explosion can take out multiple pigeons at once.</info>
+		<damage>2</damage>
+		<explosionDamage>1</explosionDamage>
+		<direction>up</direction>
+		<icon>FIRECRACKER_ICON</icon>
+		<value>50000</value>
+	</item>
+	<item>
+		<id>Baseball</id>
+		<name>Baseball</name>
+		<type>projectile</type>
+		<info>The Baseball barely bounces when it hits a pigeon and will go through multiple pigeons without losing any momentum.</info>
+		<damage>2</damage>
+		<direction>up</direction>
+		<icon>BASE_BALL_ICON</icon>
+		<value>50000</value>
+	</item>
+	<item>
+		<id>Boomerang</id>
+		<name>Boomerang</name>
+		<type>projectile</type>
+		<info><![CDATA[That's not a projectile, <b>THIS</b> is a projectile! The Boomerang always comes back to you and will K.O. many of the pigeons in its path.]]></info>
+		<damage>2</damage>
+		<direction>at mouse</direction>
+		<icon>BOOMERANG_ICON</icon>
+		<value>100000</value>
+	</item>
+	
+	<!-- End Projectile -->
+	
+</items>

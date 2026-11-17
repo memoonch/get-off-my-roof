@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 323" itemID="6afc4180-00000104" lastModified="1794213954" linkageClassName="BoomerangSprite" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 323">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#46ce93" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 322" centerPoint3DX="43.5" centerPoint3DY="22.6">
+                                             <matrix>
+                                                  <Matrix tx="0.0" ty="0.0" a="0.5941162109375" d="0.5941162109375"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

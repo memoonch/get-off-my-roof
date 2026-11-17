@@ -1,0 +1,36 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 197" itemID="6afc4180-000000d2" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 197">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#ae855f" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#fec878" alpha="1.0"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes>
+                                                  <StrokeStyle index="1">
+                                                       <SolidStroke weight="1.0" scaleMode="normal">
+                                                            <fill>
+                                                                 <SolidColor color="#febb56"/>
+                                                            </fill>
+                                                       </SolidStroke>
+                                                  </StrokeStyle>
+                                             </strokes>
+                                             <edges>
+                                                  <Edge fillStyle0="1" fillStyle1="0" strokeStyle="1" edges="! 479 385[ 438 374 429 327| 417 81[ 412 0 348 0[ 289 6 288 144[ 287 280 321 427[ 313 440 275 412[ 223 321 137 296[ 47 273 6 319[ -19 362 57 414[ 123 485 144 559[ 151 846 348 884[ 626 979 698 750[ 839 728 875 611[ 903 584 941 586[ 982 589 1010 565[ 1040 508 948 450[ 916 436 885 443[ 853 449 830 470[ 807 490 769 487[ 683 460 664 373[ 667 271 710 169[ 771 41 702 15[ 631 -18 583 122[ 552 213 539 316[ 537 401 487 385"/>
+                                                  <Edge fillStyle0="1" fillStyle1="0" strokeStyle="0" edges="! 487 385| 479 385"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<house entityID="House1" x="265" y="290">
+	<roofs>
+		<roof>
+			<wall>
+				<from x="260" y="115"></from>
+				<to x="45" y="188"></to>
+			</wall>
+			
+			<wall>
+				<from x="490" y="190"></from>
+				<to x="260" y="115"></to>
+			</wall>
+		</roof>
+	</roofs>
+</house>

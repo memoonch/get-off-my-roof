@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 134" itemID="6afc4180-000000b0" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 134">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#dad814" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#333333"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes/>
+                                             <edges>
+                                                  <Edge fillStyle0="0" fillStyle1="1" strokeStyle="0" edges="! 1791 1065| 1249 980| 1255 908[ 1255 760 1150 656[ 1046 551 897 551| 846 555| 752 12| 902 0[ 1276 0 1540 264[ 1804 528 1804 902[ 1804 986 1791 1065"/>
+                                                  <Edge fillStyle0="0" fillStyle1="1" strokeStyle="0" edges="! 541 868| 539 908[ 539 1057 644 1162[ 749 1267 897 1267| 968 1261| 1060 1792| 902 1804[ 528 1804 264 1540[ 0 1276 0 902[ 0 841 7 783| 541 868"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

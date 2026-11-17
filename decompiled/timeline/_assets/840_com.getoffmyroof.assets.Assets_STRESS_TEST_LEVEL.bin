@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level>
+	<name>
+	</name>
+	
+	<description>
+	</description>
+	
+	<sky>sky1</sky>
+	<house>house1</house>
+	
+	<droppers>
+		<dropper id="PigeonDropper1" dropRate="50" dropChance="1" lifeTime="-1" timeBeforeDrop="0">
+			<spawner type="PigeonSpawner" entity="Pigeon" num="1" limit="120"></spawner>
+		</dropper>
+	</droppers>
+	
+	<groups>
+		<!--
+		<group id="g1">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>g2</groupID>
+				</action>
+			</trigger>
+			
+			<spawner type="PigeonSpawner" entity="Pigeon" num="150"></spawner>
+		</group>
+		
+		<group id="g2">
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>g1</groupID>
+				</action>
+			</trigger>
+			
+			<spawner type="PigeonSpawner" entity="Pigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownPigeon" num="5"></spawner>
+			
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="5"></spawner>
+			
+			<spawner type="PigeonSpawner" entity="SoldierPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackSoldierPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownSoldierPigeon" num="5"></spawner>
+			
+			<spawner type="PigeonSpawner" entity="CrazyPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackCrazyPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownCrazyPigeon" num="5"></spawner>
+			
+			<spawner type="PigeonSpawner" entity="BomberPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackBomberPigeon" num="5"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownBomberPigeon" num="5"></spawner>
+		</group>
+		-->
+	</groups>
+</level>

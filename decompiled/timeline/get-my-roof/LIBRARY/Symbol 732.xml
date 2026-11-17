@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 732" itemID="6afc4180-000001de" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 732">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#b7de6a" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <RadialGradient focalPointRatio="0">
+                                                            <matrix>
+                                                                 <Matrix tx="18.65" ty="6.4" a="0.02423095703125" d="0.02423095703125"/>
+                                                            </matrix>
+                                                            <GradientEntry color="#a6a6a6" alpha="1.0" ratio="0.0"/>
+                                                            <GradientEntry color="#c8c8c8" alpha="1.0" ratio="1.0"/>
+                                                       </RadialGradient>
+                                                  </FillStyle>
+                                             </fills>
+                                             <strokes>
+                                                  <StrokeStyle index="1">
+                                                       <SolidStroke weight="1.0" pixelHinting="true" scaleMode="normal">
+                                                            <fill>
+                                                                 <SolidColor color="#666666" alpha="0.5019608"/>
+                                                            </fill>
+                                                       </SolidStroke>
+                                                  </StrokeStyle>
+                                             </strokes>
+                                             <edges>
+                                                  <Edge fillStyle0="0" fillStyle1="1" strokeStyle="1" edges="! 770 113[ 770 140 749 159| 723 175| 724 187[ 724 211 705 228[ 687 246 660 246[ 633 246 614 228| 600 207[ 597 215 575 216[ 552 217 523 197| 516 205[ 501 219 480 219[ 459 219 444 205| 432 186| 430 187[ 403 215 365 215[ 341 215 322 204| 313 220[ 302 232 287 232[ 272 232 261 220| 252 206| 244 214[ 218 239 182 239[ 151 239 128 221[ 106 242 76 242[ 45 242 22 220[ 0 199 0 168[ 0 137 22 115[ 40 98 64 95[ 56 81 56 64[ 56 37 75 18[ 95 0 123 0[ 151 0 170 18[ 190 37 190 64| 190 72[ 225 69 246 83[ 268 97 273 121[ 273 82 300 54[ 327 27 365 27[ 403 27 430 54| 443 70[ 454 59 469 59| 484 62| 502 37[ 532 8 573 8[ 614 8 643 37| 660 59[ 677 48 699 48[ 728 48 749 67[ 770 86 770 113"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

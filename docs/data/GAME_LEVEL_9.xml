@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level>
+	<name>
+		Day Nine
+	</name>
+	
+	<description>
+	</description>
+	
+	<sky>sky1</sky>
+	<house>house1</house>
+	
+	<droppers>
+		<dropper id="PigeonDropper1" dropRate="1000" dropChance="1" lifeTime="10000" timeBeforeDrop="0">
+			<spawner type="PigeonSpawner" entity="Pigeon" num="1" limit="10"></spawner>
+		</dropper>
+		<dropper id="BlackPigeonDropper1" dropRate="1000" dropChance="1" lifeTime="10000" timeBeforeDrop="-1">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="1" limit="10"></spawner>
+		</dropper>
+		<dropper id="BrownPigeonDropper1" dropRate="1000" dropChance="1" lifeTime="10000" timeBeforeDrop="-1">
+			<spawner type="PigeonSpawner" entity="BrownPigeon" num="1" limit="5"></spawner>
+		</dropper>
+	</droppers>
+	
+	<groups>
+		<group id="1">
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="2"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="1"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>2</groupID>
+				</action>
+				<action type="RestartDroppersAction">
+					<dropperID>BlackPigeonDropper1</dropperID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="2">
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="2"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="1"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>3</groupID>
+				</action>
+				<action type="RestartDroppersAction">
+					<dropperID>BrownPigeonDropper1</dropperID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="3">
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="1"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="3"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>4</groupID>
+				</action>
+				<action type="RestartDroppersAction">
+					<dropperID>PigeonDropper1</dropperID>
+					<dropperID>BlackPigeonDropper1</dropperID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="4">
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="3"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="3"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>5</groupID>
+				</action>
+				<action type="RestartDroppersAction">
+					<dropperID>PigeonDropper1</dropperID>
+					<dropperID>BrownPigeonDropper1</dropperID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="5">
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="3"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="3"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>6</groupID>
+				</action>
+				<action type="RestartDroppersAction">
+					<dropperID>BlackPigeonDropper1</dropperID>
+					<dropperID>BrownPigeonDropper1</dropperID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="6">
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="3"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="3"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="SpawnGroupAction">
+					<groupID>7</groupID>
+				</action>
+				<action type="RestartDroppersAction">
+					<dropperID>PigeonDropper1</dropperID>
+					<dropperID>BlackPigeonDropper1</dropperID>
+					<dropperID>BrownPigeonDropper1</dropperID>
+				</action>
+			</trigger>
+		</group>
+		
+		<group id="7">
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="3"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="3"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="3"></spawner>
+			<trigger type="GroupDeadTrigger">
+				<action type="StopAllDroppersAction" />
+				<action type="SelectLevelAction">
+					<levelID>level010</levelID>
+				</action>		
+			</trigger>
+		</group>
+	</groups>
+</level>

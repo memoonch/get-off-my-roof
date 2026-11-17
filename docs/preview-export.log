@@ -1,0 +1,32 @@
+Nov 17, 2026 5:01:10 PM com.jpexs.decompiler.flash.gui.Main clearLogFile
+SEVERE: Cannot initialize logging
+java.nio.file.AccessDeniedException: C:\Users\Alpha\AppData\Roaming\JPEXS\FFDec\logs\log.txt.lck
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newFileChannel(WindowsFileSystemProvider.java:118)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:301)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:353)
+	at java.logging/java.util.logging.FileHandler.openFiles(FileHandler.java:490)
+	at java.logging/java.util.logging.FileHandler.<init>(FileHandler.java:300)
+	at com.jpexs.decompiler.flash.gui.Main.clearLogFile(Main.java:3964)
+	at com.jpexs.decompiler.flash.gui.Main.initLogging(Main.java:4046)
+	at com.jpexs.decompiler.flash.gui.Main.main(Main.java:3598)
+
+JPEXS Free Flash Decompiler v.26.3.0
+------------------------------------
+Exporting sprite...
+Exported frame 1/1 DefineSprite (chid: 778, cls: com.getoffmyroof.assets.Assets_PLAYER_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 814, cls: com.getoffmyroof.assets.Assets_BOMBER_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 831, cls: com.getoffmyroof.assets.Assets_FAT_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 852, cls: com.getoffmyroof.assets.Assets_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 883, cls: com.getoffmyroof.assets.Assets_BOSS_ROCKY_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 902, cls: com.getoffmyroof.assets.Assets_BOSS_BOMBER_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 923, cls: com.getoffmyroof.assets.Assets_CRAZY_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 933, cls: com.getoffmyroof.assets.Assets_BOSS_SOLDIER_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 976, cls: com.getoffmyroof.assets.Assets_SOLDIER_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 985, cls: com.getoffmyroof.assets.Assets_BOSS_FAT_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 994, cls: com.getoffmyroof.assets.Assets_BOSS_CRAZY_PIGEON_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 1031, cls: com.getoffmyroof.assets.Assets_BACKGROUND_SKY_1)
+Export finished. Total export time: 00:01.185
+OK

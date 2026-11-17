@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 639" itemID="6afc4180-000001b4" lastModified="1794213954" linkageClassName="ShovelAnimations" linkageExportForAS="true">
+     <timeline>
+          <DOMTimeline name="Symbol 639">
+               <layers>
+                    <DOMLayer name="Labels Layer" color="#8c89a3">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728" name="IdleAnimationStart" labelType="name">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" keyMode="9728" name="IdleAnimationEnd" labelType="name">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#25e88e" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="2" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 638" centerPoint3DX="142.6" centerPoint3DY="66.05">
+                                             <matrix>
+                                                  <Matrix tx="122.7" ty="-14.8" a="0.0" d="0.0" b="0.7635345458984375" c="-0.7635345458984375"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 256" itemID="6afc4180-000000ed" lastModified="1794213954">
+     <timeline>
+          <DOMTimeline name="Symbol 256">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#ca30f2">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 255" centerPoint3DX="46.0" centerPoint3DY="47.35">
+                                             <matrix>
+                                                  <Matrix tx="10.0" ty="10.35" a="6.5553741455078125" d="0.651275634765625"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <filters>
+                                                  <BlurFilter blurX="3" blurY="3" quality="1"/>
+                                             </filters>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#fd5ecc" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 253" centerPoint3DX="34.5" centerPoint3DY="34.5">
+                                             <matrix>
+                                                  <Matrix tx="0.0" ty="0.0" a="6.9291534423828125" d="1.0"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <filters>
+                                                  <BevelFilter blurX="6" blurY="6" quality="1" angle="44.999253346524966" distance="15.0" highlightColor="#e9e9e9" shadowColor="#b1b1b1" strength="1"/>
+                                             </filters>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timeline>
+</DOMSymbolItem>

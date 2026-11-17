@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level>
+	<name>
+		Day Ten
+	</name>
+	
+	<description>
+	</description>
+	
+	<sky>sky1</sky>
+	<house>house1</house>
+	
+	<music>BossMusic</music>
+	
+	<droppers>
+		<dropper id="PigeonDropper1" dropRate="1500" dropChance="1" lifeTime="60000" timeBeforeDrop="2000">
+			<spawner type="PigeonSpawner" entity="Pigeon" num="1" limit="8"></spawner>
+			<spawner type="PigeonSpawner" entity="FatPigeon" num="1" limit="3"></spawner>
+		</dropper>
+		
+		<dropper id="BlackPigeonDropper1" dropRate="1500" dropChance="1" lifeTime="50000" timeBeforeDrop="12000">
+			<spawner type="PigeonSpawner" entity="BlackPigeon" num="1" limit="8"></spawner>
+			<spawner type="PigeonSpawner" entity="BlackFatPigeon" num="1" limit="3"></spawner>
+		</dropper>
+		
+		<dropper id="BrownPigeonDropper1" dropRate="1500" dropChance="1" lifeTime="40000" timeBeforeDrop="20000">
+			<spawner type="PigeonSpawner" entity="BrownPigeon" num="1" limit="6"></spawner>
+			<spawner type="PigeonSpawner" entity="BrownFatPigeon" num="1" limit="3"></spawner>
+		</dropper>
+	</droppers>
+	
+	<groups>
+		<group id="1">
+			<spawner type="PigeonSpawner" entity="BossFatPigeon" num="1"></spawner>
+			
+			<trigger type="GroupDeadTrigger">
+				<action type="StopAllDroppersAction" />
+				<action type="SelectLevelAction">
+					<levelID>level011</levelID>
+				</action>
+			</trigger>
+		</group>
+	</groups>
+</level>
