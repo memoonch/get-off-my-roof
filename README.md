@@ -1,5 +1,7 @@
 # Get Off My Roof — remaster research
 
+The first playable art batch updates the house, sky and garden to the approved polished-cartoon direction. See `remaster/design/environment-pass-1.md`. Characters, HUD and menus await their own batches.
+
 The current remaster presentation is **960 × 540 (16:9)**, with extended scenery, a right-aligned HUD, proportionally scaled artwork, and original gameplay coordinates. See `docs/widescreen.md` for implementation details.
 
 The original Flash game has been decompiled for asset and gameplay research. The first remaster build removes unwanted menu buttons while preserving the original gameplay code.

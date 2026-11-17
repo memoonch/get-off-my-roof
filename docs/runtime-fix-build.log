@@ -1,4 +1,4 @@
-Nov 17, 2026 6:56:07 PM com.jpexs.decompiler.flash.gui.Main clearLogFile
+Nov 17, 2026 7:17:55 PM com.jpexs.decompiler.flash.gui.Main clearLogFile
 SEVERE: Cannot initialize logging
 java.nio.file.AccessDeniedException: C:\Users\Alpha\AppData\Roaming\JPEXS\FFDec\logs\log.txt.lck
 	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)

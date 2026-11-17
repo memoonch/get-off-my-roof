@@ -1,0 +1,179 @@
+[
+  {
+    "name": "PLAYER_ANIMATIONS",
+    "id": 778,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 778.xml",
+    "labels": [
+      {
+        "label": "NeutralPose",
+        "frame": 1
+      },
+      {
+        "label": "IdleAnimationStart",
+        "frame": 2
+      },
+      {
+        "label": "IdleAnimationEnd",
+        "frame": 3
+      },
+      {
+        "label": "WalkAnimationStart",
+        "frame": 4
+      },
+      {
+        "label": "WalkAnimationEnd",
+        "frame": 16
+      },
+      {
+        "label": "HitAnimationStart",
+        "frame": 17
+      },
+      {
+        "label": "HitAnimationEnd",
+        "frame": 25
+      },
+      {
+        "label": "ThrowAnimationStart",
+        "frame": 26
+      },
+      {
+        "label": "ThrowAnimationEnd",
+        "frame": 39
+      },
+      {
+        "label": "JumpAnimationStart",
+        "frame": 40
+      },
+      {
+        "label": "JumpAnimationEnd",
+        "frame": 52
+      },
+      {
+        "label": "WipeFaceAnimationStart",
+        "frame": 53
+      },
+      {
+        "label": "WipeFaceAnimationEnd",
+        "frame": 71
+      },
+      {
+        "label": "DeathAnimationStart",
+        "frame": 72
+      },
+      {
+        "label": "DeathAnimationEnd",
+        "frame": 80
+      },
+      {
+        "label": "SwingAnimationStart",
+        "frame": 81
+      },
+      {
+        "label": "SwingAnimationEnd",
+        "frame": 92
+      }
+    ]
+  },
+  {
+    "name": "PIGEON_ANIMATIONS",
+    "id": 852,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 852.xml",
+    "labels": [
+      {
+        "label": "HopAnimationStart",
+        "frame": 1
+      },
+      {
+        "label": "HopAnimationEnd",
+        "frame": 9
+      },
+      {
+        "label": "FlyAnimationStart",
+        "frame": 10
+      },
+      {
+        "label": "FlyAnimationEnd",
+        "frame": 17
+      },
+      {
+        "label": "IdleAnimationStart",
+        "frame": 18
+      },
+      {
+        "label": "IdleAnimationEnd",
+        "frame": 50
+      },
+      {
+        "label": "LandingAnimationStart",
+        "frame": 51
+      },
+      {
+        "label": "LandingAnimationEnd",
+        "frame": 71
+      },
+      {
+        "label": "PooAnimationStart",
+        "frame": 72
+      },
+      {
+        "label": "PooAnimationEnd",
+        "frame": 83
+      },
+      {
+        "label": "DeathAnimationStart",
+        "frame": 84
+      },
+      {
+        "label": "DeathAnimationEnd",
+        "frame": 93
+      },
+      {
+        "label": "HitAnimationStart",
+        "frame": 94
+      },
+      {
+        "label": "HitAnimationEnd",
+        "frame": 106
+      }
+    ]
+  },
+  {
+    "name": "HOUSE_BACKGROUND_1",
+    "id": 387,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 387.xml",
+    "labels": []
+  },
+  {
+    "name": "BACKGROUND_SKY_1",
+    "id": 1031,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 1031.xml",
+    "labels": []
+  },
+  {
+    "name": "NEWSPAPER_ANIMATIONS",
+    "id": 858,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 858.xml",
+    "labels": [
+      {
+        "label": "IdleAnimationStart",
+        "frame": 1
+      },
+      {
+        "label": "IdleAnimationEnd",
+        "frame": 2
+      }
+    ]
+  },
+  {
+    "name": "NEWSPAPER_ICON",
+    "id": 612,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 612.xml",
+    "labels": []
+  },
+  {
+    "name": "ROCK_ICON",
+    "id": 608,
+    "file": "decompiled/timeline/get-my-roof/LIBRARY/Symbol 608.xml",
+    "labels": []
+  }
+]
