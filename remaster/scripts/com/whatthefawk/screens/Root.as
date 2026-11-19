@@ -6,6 +6,9 @@ package com.whatthefawk.screens
    import com.whatthefawk.utils.KeyCode;
    import flash.display.Stage;
    import flash.events.Event;
+   import flash.text.TextField;
+   import flash.text.TextFormat;
+   import flash.utils.getTimer;
    
    public class Root extends AScreen
    {
@@ -31,6 +34,9 @@ package com.whatthefawk.screens
       private var m_screenToSet:Class;
       
       private var m_ticker:Ticker;
+      private var m_fpsCounter:TextField;
+      private var m_fpsWindowStart:int;
+      private var m_fpsFrames:int = 0;
       
       public function Root(param1:Stage = null)
       {
@@ -82,10 +88,41 @@ package com.whatthefawk.screens
          Root.WIDTH = 640;
          Root.HEIGHT = 480;
          Root.stage.quality = this.DEFAULT_QUALITY;
+         this.m_fpsCounter = new TextField();
+         this.m_fpsCounter.defaultTextFormat = new TextFormat("_sans",12,0xA5F3B4,true);
+         this.m_fpsCounter.width = 110;
+         this.m_fpsCounter.height = 23;
+         this.m_fpsCounter.x = 8;
+         this.m_fpsCounter.y = 8;
+         this.m_fpsCounter.background = true;
+         this.m_fpsCounter.backgroundColor = 0x161B22;
+         this.m_fpsCounter.selectable = false;
+         this.m_fpsCounter.mouseEnabled = false;
+         this.m_fpsCounter.text = "FPS: -- / 30";
+         Root.stage.addChild(this.m_fpsCounter);
+         this.m_fpsWindowStart = getTimer();
+         Root.stage.addEventListener(Event.ENTER_FRAME,this.onFpsFrame,false,0,true);
          m_isUpdateOn = true;
          m_areBreakpointsEnabled = true;
          Input.instance.activate(Root.stage);
          this.onDataLoad(null);
+      }
+
+      private function onFpsFrame(param1:Event) : void
+      {
+         ++this.m_fpsFrames;
+         var now:int = getTimer();
+         var elapsed:int = now - this.m_fpsWindowStart;
+         if(elapsed >= 1000)
+         {
+            this.m_fpsCounter.text = "FPS: " + (this.m_fpsFrames * 1000 / elapsed).toFixed(1) + " / 30";
+            this.m_fpsFrames = 0;
+            this.m_fpsWindowStart = now;
+         }
+         if(Root.stage.getChildIndex(this.m_fpsCounter) != Root.stage.numChildren - 1)
+         {
+            Root.stage.setChildIndex(this.m_fpsCounter,Root.stage.numChildren - 1);
+         }
       }
       
       public function set gameSpeed(param1:Number) : void

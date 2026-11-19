@@ -1,0 +1,29 @@
+{
+  "base": "Use case: stylized-concept. Create game sprite sheet EXACTLY 1536x1024, 3 columns by 2 rows of six 512x512 cells, reading order left to right top then bottom. Reference is approved BOSS SOLDIER with MEDAL: same identity and proportions throughout. Front-facing gray pigeon officer with tall tapered chest, narrow neck and pointed feather collar, stern inward-sloping white eyes black pupils, bent dark open beak, gray camouflage helmet with dangling dark straps both sides, DARK GRAY shoulder epaulettes with segmented GOLD YELLOW bars, ONE red ribbon with narrow gold edges suspending a round GOLD STAR MEDAL on upper chest at viewer RIGHT. Preserve medal in EVERY pose, it moves with chest. Two dark charcoal bars on each wing, layered rounded feather ends, short gray fan tail, coral pink legs and three-toed feet. Match reference clean dark outlines, neutral gray palette and restrained cel shading. No grenades, additional medals, rank bars, weapons, text, effects, ground, glow, shadows, scenery, grid or backgrounds. Actual transparent alpha0 background. Every full bird inside its own cell without overlap/cropping. Consistent bird body size: neutral full-body height about330px, centered x256 with standing feet baseline450; ample wing room. Maintain original long body and short head shape; no fat belly or human arms/hands. ",
+  "states": [
+    [
+      "fly",
+      "Six consecutive wingbeat keys:1 wings high V,2 diagonal up outward,3 horizontal full spread,4 diagonal downward,5 lowest downstroke,6 recovering halfway outward/up. Keep helmet head and chest in fixed position/scale; feet loosely tucked, wings hinge below shoulder pads. Epaulettes and medal stay attached to torso, not wing tips."
+    ],
+    [
+      "hop",
+      "Six small hop keys:1 neutral standing,2 crouch slightly feet on450 baseline,3 push off extending legs,4 airborne body rises15px toes tucked wings partly flare,5 feet reach for landing,6 neutral standing. Preserve full-body scale and medal."
+    ],
+    [
+      "landing",
+      "Six landing keys:1 wings high V feet reach down,2 horizontal wings legs extended,3 wings lower feet touch450 baseline,4 knees bend in landing crouch wings partly fold,5 straighten with wings nearly folded,6 neutral approved standing. Keep shoulder epaulettes attached to torso. Preserve medal."
+    ],
+    [
+      "attack",
+      "Six comical dropping attack keys front view:1 neutral,2 slight squat,3 tense crouch wings lift slightly,4 deepest strain eyes squeeze closed tail tilts up behind,5 release relax eyes reopen,6 neutral. Feet stay baseline450. Preserve medal and shoulder pads. NO droppings/projectiles/effects drawn; game generates separately."
+    ],
+    [
+      "hit",
+      "Six harmless hit reaction keys:1 neutral,2 flinch eyes closed head tilt,3 body recoils right wings partly spread,4 rebounds slightly left wings loose,5 regains balance,6 neutral. Same size/proportions and all costume details including red-ribbon gold medal. No injury or stars/effects."
+    ],
+    [
+      "death",
+      "Six harmless defeated tumbling keys:1 upright stunned wings loose eyes unfocused,2 ENTIRE bird rotates45degrees clockwise,3 horizontal headRIGHT feetLEFT,4 upside down headBOTTOM feetUP,5 horizontal headLEFT feetRIGHT,6 rotated315degrees clockwise headUPLEFT feetDOWNRIGHT. Rotate entire helmet head body wings legs and medal as ONE bird around center256,256. Uniform scale full bird fits cells, no cropping; no ground or lying corpse or loose parts/effects."
+    ]
+  ]
+}

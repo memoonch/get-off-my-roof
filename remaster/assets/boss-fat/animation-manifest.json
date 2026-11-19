@@ -1,0 +1,230 @@
+{
+  "renderScale": 0.3333333333333333,
+  "visibleIdleHeight": 76.66666666666667,
+  "columns": 6,
+  "rows": 7,
+  "anchor": [
+    135,
+    255
+  ],
+  "registration": [
+    {
+      "sourceReferenceBounds": {
+        "x": 166,
+        "bottom": 1192,
+        "width": 916,
+        "height": 1097,
+        "y": 96
+      },
+      "state": "idle",
+      "scale": 0.2096627164995442,
+      "row": 0
+    },
+    {
+      "sourceReferenceBounds": {
+        "x": 63,
+        "bottom": 483,
+        "width": 404,
+        "height": 446,
+        "y": 38
+      },
+      "state": "fly",
+      "scale": 0.515695067264574,
+      "row": 1
+    },
+    {
+      "sourceReferenceBounds": {
+        "x": 68,
+        "bottom": 481,
+        "width": 372,
+        "height": 455,
+        "y": 27
+      },
+      "state": "hop",
+      "scale": 0.5054945054945055,
+      "row": 2
+    },
+    {
+      "sourceReferenceBounds": {
+        "x": 73,
+        "bottom": 472,
+        "width": 361,
+        "height": 431,
+        "y": 42
+      },
+      "state": "landing",
+      "scale": 0.5336426914153132,
+      "row": 3
+    },
+    {
+      "sourceReferenceBounds": {
+        "x": 72,
+        "bottom": 484,
+        "width": 365,
+        "height": 457,
+        "y": 28
+      },
+      "state": "attack",
+      "scale": 0.5032822757111597,
+      "row": 4
+    },
+    {
+      "sourceReferenceBounds": {
+        "x": 94,
+        "bottom": 476,
+        "width": 323,
+        "height": 400,
+        "y": 77
+      },
+      "state": "hit",
+      "scale": 0.575,
+      "row": 5
+    },
+    {
+      "sourceReferenceBounds": {
+        "x": 67,
+        "bottom": 480,
+        "width": 376,
+        "height": 446,
+        "y": 35
+      },
+      "state": "death",
+      "scale": 0.515695067264574,
+      "row": 6
+    }
+  ],
+  "cell": [
+    270,
+    270
+  ],
+  "states": [
+    {
+      "map": [
+        0,
+        0
+      ],
+      "name": "idle",
+      "loop": true,
+      "frames": 2
+    },
+    {
+      "map": [
+        0,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        2,
+        1
+      ],
+      "name": "fly",
+      "loop": true,
+      "frames": 9
+    },
+    {
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "name": "hop",
+      "loop": false,
+      "frames": 9
+    },
+    {
+      "map": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "name": "landing",
+      "loop": true,
+      "frames": 19
+    },
+    {
+      "map": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        0
+      ],
+      "name": "attack",
+      "loop": false,
+      "frames": 12
+    },
+    {
+      "map": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "name": "hit",
+      "loop": false,
+      "frames": 13
+    },
+    {
+      "map": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5,
+        5
+      ],
+      "name": "death",
+      "loop": true,
+      "frames": 15
+    }
+  ]
+}

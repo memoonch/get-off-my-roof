@@ -1,0 +1,1 @@
+Remove the entire white/gray background, cell divider lines and all shadows/glows from this six-pose pigeon sprite sheet. Replace with genuinely fully transparent alpha. Keep all six birds, their positions, sizes, colors, outlines and poses exactly unchanged, including white eyes opaque. Preserve 1536x1024 layout, no labels, no new details. Clean sprite cutouts only.

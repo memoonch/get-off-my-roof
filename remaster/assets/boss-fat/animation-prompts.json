@@ -1,0 +1,29 @@
+{
+  "base": "Strictidentity reference attached APPROVED BOSS FAT PIGEON. Make sprite sheet exactly1536x1024 with3columns2rows, six512squarecells readingleft-right thenbottom. Samebody proportions/scale everycell: neutralbird330pixels tall centeredx256 feetbaseline450, allowwingroom. Preserve ENORMOUS nearlyCIRCULAR LOWHANGING GRAYBELLY with scallopedbottom, smallovalhead/narrowneck, stern angrywhiteeyes inwardsloping upperedges darkpupilslookdown, thinraisedbrows tinycrookeddarkopenbeak. TWOcharcoalbars on each shortgraywing, shorttailfan, EXTREMELYshort coralpinklegs/tinywidelyspacedthree-toedfeet. Thisis BOSS Fat notregularsleepypigeon: keepsternface androundbelly, no pointedpearbelly/slimbody/longlegs. Smoothdarkoutlines restrainedcelshading matchreference. Entirebirdinsidecells nooverlap/cropping, true transparent alpha0background NO glow/shadow/grid/whitebackground/labels/text/scenery/props/costumes/humanarms.",
+  "states": [
+    [
+      "fly",
+      " Six wingbeatkeys frontview:1 wingshighV,2 diagonalupout,3 horizontalspread,4 diagonaldownout,5 lowestdownstroke,6 recoveryhalfupout. Hugecircularbellybody/head fixedroughlysamepositionandscale. Tinyfeetlooselytucked, wingsattachshoulders, entirewingfitscell, notslim."
+    ],
+    [
+      "hop",
+      " Six smallhopkeys frontview:1 neutralstanding,2 heavycrouch feetfixedbaseline450,3 pushoff tinylegsextend,4 airborne tinytuckedtoes bodyraised15px wingsslightlyflare,5 toesextendtoland,6 neutralstanding. Samecircularbody/scale throughout, don'tturnintopearshapedbody."
+    ],
+    [
+      "landing",
+      " Six heavylandingkeys frontview:1 wingshighV toesreachdown,2 horizontalwings tinylegsextend,3 lowerwings toestouchbaseline450,4 heavycrouch broadbellysquash slightly wingspartfold,5 straighten wingsnearlyfold,6 neutralreference. Samebodyscale, hugeROUNDbelly retained."
+    ],
+    [
+      "attack",
+      " Six comicaldroppingattackkeys frontview:1 neutral,2 slightsquat,3 tensecrouch bellypuffs winglift,4 deepeststrain eyessqueezedclosed tailraisedbehind,5 releaserelax eyesreopen,6 neutral. Tinyfeetstaybaseline450. No droppings/projectiles/effects drawn, existingcodecreates separately."
+    ],
+    [
+      "hit",
+      " Six harmlesshitreactionkeys:1 neutral,2 flinch eyesclosed headtilt,3 heavybodyrecoilright wingspartlyopen,4 reboundleft wingsloose,5 regainbalance,6 neutral. SamehugeROUNDbody scale, no stars/gore/effects."
+    ],
+    [
+      "death",
+      " Six harmless defeatedtumblingkeys:1 uprightstunned eyescrossed wingsloose,2 ENTIREbird45degreesclockwise,3 horizontalheadRIGHT tinyfeetLEFT,4 upsidedown headBOTTOM feetUP,5 horizontalheadLEFT feetRIGHT,6 315degreesclockwise headUPLEFT feetDOWNRIGHT oppositepose2. RotateentirefatROUNDbody aboutcellcenter256,256, uniformbodyscale, fullbirdinsidecells. No ground/lyingcorpse/effects/looseparts."
+    ]
+  ]
+}

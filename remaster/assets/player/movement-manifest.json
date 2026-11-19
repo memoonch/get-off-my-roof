@@ -1,0 +1,142 @@
+{
+  "frameSize": [
+    270,
+    300
+  ],
+  "rows": 3,
+  "states": {
+    "walk": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      0
+    ],
+    "throw": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      0
+    ],
+    "jump": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5
+    ]
+  },
+  "columns": 6,
+  "registration": [
+    {
+      "sourceHeadCenter": 253.5,
+      "pose": 0,
+      "scale": 0.44835164835164837,
+      "state": "walk",
+      "sourceBaseline": 480
+    },
+    {
+      "sourceHeadCenter": 254.5,
+      "pose": 1,
+      "scale": 0.44835164835164837,
+      "state": "walk",
+      "sourceBaseline": 480
+    },
+    {
+      "sourceHeadCenter": 255.0,
+      "pose": 2,
+      "scale": 0.44835164835164837,
+      "state": "walk",
+      "sourceBaseline": 480
+    },
+    {
+      "sourceHeadCenter": 254.0,
+      "pose": 3,
+      "scale": 0.44835164835164837,
+      "state": "walk",
+      "sourceBaseline": 480
+    },
+    {
+      "sourceHeadCenter": 254.5,
+      "pose": 4,
+      "scale": 0.44835164835164837,
+      "state": "walk",
+      "sourceBaseline": 480
+    },
+    {
+      "sourceHeadCenter": 255.0,
+      "pose": 5,
+      "scale": 0.44835164835164837,
+      "state": "walk",
+      "sourceBaseline": 480
+    },
+    {
+      "sourceHeadCenter": 254.5,
+      "pose": 0,
+      "scale": 0.44835164835164837,
+      "state": "jump",
+      "sourceBaseline": 470
+    },
+    {
+      "sourceHeadCenter": 255.0,
+      "pose": 1,
+      "scale": 0.44835164835164837,
+      "state": "jump",
+      "sourceBaseline": 470
+    },
+    {
+      "sourceHeadCenter": 254.0,
+      "pose": 2,
+      "scale": 0.44835164835164837,
+      "state": "jump",
+      "sourceBaseline": 470
+    },
+    {
+      "sourceHeadCenter": 255.0,
+      "pose": 3,
+      "scale": 0.44835164835164837,
+      "state": "jump",
+      "sourceBaseline": 470
+    },
+    {
+      "sourceHeadCenter": 255.0,
+      "pose": 4,
+      "scale": 0.44835164835164837,
+      "state": "jump",
+      "sourceBaseline": 470
+    },
+    {
+      "sourceHeadCenter": 254.5,
+      "pose": 5,
+      "scale": 0.44835164835164837,
+      "state": "jump",
+      "sourceBaseline": 470
+    }
+  ]
+}

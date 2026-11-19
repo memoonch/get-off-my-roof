@@ -1,0 +1,35 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "bomber-pigeon-idle-master-v1.png",
+  "base": "STRICT reference: attached APPROVED BOMBER PIGEON. Create one sprite sheet exactly1536x1024 with 3 columns and2 rows, six512x512 cells readleft-right thensecondrow. Same birdscale eachcell: neutralbird330px tall, centeredx256 toesbaseline450, generouswingroom. Preserve aviatorcap with earpads and slimchinstraps, thickgrayframed paleBLUEgoggles with large goofyeyes, shortdarkopenbeak, grayneck, shortstockybody wearing charcoalgraypilotvest with raisedcollar, EXACTLY3smallcentralbuttons, smallpocket and plainyellowpilotbadge on VIEWERRIGHTchest. Grayfoldedwings andtail, coralpinktoes. Outfit staysattached during everypose; no humanarms/hands, bombs or extra props. Smoothdarkoutlines restrainedcelshading matchreference. Fullbirdinsideeachcell, nooverlap/cropping, genuine transparentbackground alpha0, NO shadow/glow/grid/whitebackground/text/labels/scenery. ",
+  "states": [
+    [
+      "idle",
+      "Six subtle standing idle keys: 1 exactreferenceneutral, 2 gentle inhale chestslightrise, 3 halfblinkbehindgoggles, 4 eyesclosedblinkbehindgoggles, 5 eyesreopen exhale, 6 neutral. Feetfixedbaseline, wingsfolded, no walking/jumping or headscalechanges. Keepgoggles blue buteyesreadable."
+    ],
+    [
+      "fly",
+      "Six fullwingbeat keys frontview: 1 wingshighV, 2 wingsdiagonallyupout, 3 wingshorizontalspread, 4 wingsdiagonallydownout, 5 lowestdownstroke nearvest, 6 recoveryhalfupout. Body/vest/headfixedroughly sameposition andsize. Shortpinkfeetlooselytucked. Wingsattachatshoulders OUTSIDEvest not humanarms. Entirewingsfitincells."
+    ],
+    [
+      "hop",
+      "Six smallhopkeys frontview: 1 neutralstanding, 2 crouch feetfixedbaseline450, 3 push off extendinglegs, 4 airborne toestuck wingsslightlyflared bodyraised20px, 5 feetextendtoland, 6 neutralstanding. Samebirdbodyscale andalloutfitdetails."
+    ],
+    [
+      "landing",
+      "Six landingbrakingkeys frontview: 1 wingshighV toesreachdown, 2 horizontalwings feetextend, 3 lowerwings toescontactbaseline450, 4 slightcrouch wingspartfold, 5 straighten wingsnearlyfolded, 6 neutralreference. Samebirdscale. Cap goggles vest badge remainsecured, no props."
+    ],
+    [
+      "attack",
+      "Six original pigeon dropping/bombing attack keys frontview: 1 neutral, 2 slight squat, 3 tensecrouch chestpuff slightwinglift, 4 deepeststrain eyesclosedbehindgoggles tailraisedbehind, 5 releaserelax eyesreopen, 6 neutralstanding. Feetfixedbaseline450. Do NOT draw bombs, droppings, explosions or projectile/effects; existinggame supplies separately. Capgogglesvestbadge remainattached."
+    ],
+    [
+      "hit",
+      "Six harmless cartoon hitreactionkeys: 1 neutral, 2 flinch eyesclosedbehindgoggles headtilts, 3 recoilright wingspartlyopen, 4 reboundleft wingsloose, 5 regainbalance, 6 neutral. No stars effects gore or extraobjects. Alloutfitdetails stayattached, entiretoesinsidecells."
+    ],
+    [
+      "death",
+      "Six harmless defeated tumblingkeys: 1 upright stunnedbird eyescrossedbehindgoggles wingsloose, 2 rotateENTIREbird45degreesclockwise, 3 horizontalheadRIGHT feetLEFT, 4 upside down headBOTTOM feetUP, 5 horizontalheadLEFT feetRIGHT, 6 rotate315degreesclockwise with headUPLEFT feetDOWNRIGHT (oppositetiltfrompose2). Rotateentirebirdandoutfit aboutcellcenter256,256, samebirdscale. No ground/lyingcorpse, code suppliesfall. Capgogglesvest stayattached, bluegoggles andyellowbadge rotatewithbody. Fullbirdinsideeachcell."
+    ]
+  ]
+}

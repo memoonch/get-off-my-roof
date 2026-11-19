@@ -1,0 +1,36 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "boss-rocky-idle-master-v1.png",
+  "throwMotionReference": "docs/boss-rocky-original/DefineSprite_883_com.getoffmyroof.assets.Assets_BOSS_ROCKY_PIGEON_ANIMATIONS/49.png",
+  "base": "Strictidentity reference: attached APPROVED BOSS ROCKY pigeon. Make sprite sheet exactly1536x1024, 3 columns by2 rows, six512x512cells readleft-right thenbottom. Samebossbodysize everycell, neutralbird about330px tall centeredx256 toesbaseline450 with generouswingroom. Preserve broadgrayovalbelly, smallhead andbiggoofywhiteeyes lookingdown, exaggerated thickdarkeyebrows, shortcrookeddarkopenbeak, graywings with twocharcoalbars, coralpinktoes. Brown/orange ROCK-FILLED BACKPACK behindshoulders with severalgrayroundedrocks stickingout BOTHsides of neck, two longtapered brownstraps downfrontedges; belly remainsgrayuncovered, NO fulljacket/shirt. Outfitandrocks stayattached throughout. Smoothdarkoutlines restrainedcelshading matchreference. Entirebirdfitsinsideeachcell, nooverlap/cropping, genuine transparent alpha0background, NO glow/shadow/grid/whitebackground/text/labels/scenery/newprops. ",
+  "states": [
+    [
+      "fly",
+      "Six frontview fullwingbeatkeys: 1 wingshighV, 2 diagonallyupout, 3 horizontalspread, 4 diagonallydownout, 5 lowestdownstroke nearbelly, 6 recoveryhalfupout. Bodyheadandrockpack fixed roughlysameposition andscale, longpinkfeet looselytucked. Keepwings outsidepackstraps, rocksvisible."
+    ],
+    [
+      "hop",
+      "Six smallhopkeys frontview: 1 neutralstanding approvedreference, 2 squat feetfixedbaseline450, 3 push off extendlegs, 4 airborne toeslightlytucked wingsslightlyflare bodyraised20px, 5 feetextendtoland, 6 neutralstanding. Samebossbodyscale, packandrockssecured, no looseprops."
+    ],
+    [
+      "landing",
+      "Six landingbrakingkeys frontview: 1 wingshighV toesreachingdown, 2 horizontalwings feetextend, 3 wingsdiagonaldown toescontactbaseline450, 4 slightcrouch wingspartfold, 5 straighten wingsnearlyfold, 6 neutralreference. Samebodysize, brownstrapsandrocks stayattached. Entirewingsfitinsidecells."
+    ],
+    [
+      "attack",
+      "Six goofy original dropping-attack keys frontview: 1 neutral, 2 slight squat, 3 tensecrouch slightchestpuff winglift, 4 deepeststrain eyessqueezedclosed tailraisedbehind, 5 release relax eyesreopen, 6 neutral. Feetfixedbaseline450. DoNOT drawprojectiles/droppings/effects; game handles separately. No humanhands, packstrapsrocksattached."
+    ],
+    [
+      "hit",
+      "Six harmless hitreactionkeys frontview: 1 neutral, 2 flinch eyessqueezed andheadtilts, 3 recoilright wingspartlyopen, 4 reboundleft wingsloose, 5 regainbalance, 6 neutral. Keepwidebossbody andallrockpackdetails, no stars gore effects orlooserocks."
+    ],
+    [
+      "death",
+      "Six defeated tumblingkeys: 1 uprightstunned eyescrossed wingsloose, 2 rotateentirebird45degreesclockwise, 3 horizontalheadRIGHT feetLEFT, 4 upsidedown headBOTTOM toesUP, 5 horizontalheadLEFT toesRIGHT, 6 rotate315degreesclockwise headUPLEFT toesDOWNRIGHT oppositepose2. Entirebirdandattachedrockpack rotateaboutcellcenter256,256. SAMEbodyscale andfullbirdinsidecells. No ground/lyingcorpse,codecontrolsfall. No looseprops or detachedrocks."
+    ],
+    [
+      "throw",
+      "Six original rock-throw wing-sweep keys. Reference2 is original motion reference ONLY, reference1 approvedbossdefinespolishedidentity. Front-facing: 1 readyneutral BOTHwingsslightlyout, 2 wing on VIEWERLEFT sweepsupout while wing VIEWERRIGHT extendsdownout and onefoottucks, 3 strong leftwingupsweep chestleans slightlyright, 4 reverse weight rightwingstartsupsweep leftwinglow, 5 rightwinghigh leftwingdown onefoottucks, 6 settlebothwings towardneutral. Samebossbody/head/packscale throughout, rockingbalance gesture, NO humanarms/hands and NO heldrock. Existing game creates projectile independently so doNOT draw any separate projectile, effect, loose flyingrock or motionline. Rocksremaininpackbehindshoulders. Keepfullbirdincells."
+    ]
+  ]
+}

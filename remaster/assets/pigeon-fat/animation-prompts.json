@@ -1,0 +1,31 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "fat-pigeon-idle-master-v1.png",
+  "base": "Use the attached APPROVED fat pigeon as STRICT identity reference. Create one sprite sheet exactly 1536x1024 with six poses in 3 columns and 2 rows of equal 512 square cells, reading left-right then next row. Preserve very broad fat gray pear belly, small sleepy half-lidded eyes and head, tiny open beak, short neck, striped folded wings, extremely short coral pink legs/toes. Same smooth outlines and simple cel shading. Same character proportions and scale in all cells: neutral bird about 320px tall, centered x256, feet baseline450, allowing wide wing movements to fit. Do not make slim or replace with standard pigeon. Only 1 bird eachcell. Genuine transparent background alpha0 throughout empty space, NO white background, NO glow, shadow, grid, lines, labels, text or props. All birdparts fully insidecells and no overlap. ",
+  "states": [
+    [
+      "fly",
+      "Six wingbeat keys facing viewer, maintain broad heavy belly and same body size: 1 wings high V, 2 diagonal up/out, 3 stretched horizontal, 4 diagonal down/out, 5 lowest downstroke near belly, 6 recovery outward. Short legs loosely tucked; preserve two dark bars on wings. Wings attach shoulders and do not hide face. Feet may hang because bird is heavy."
+    ],
+    [
+      "hop",
+      "Six hopping keys frontview: 1 neutral standing reference, 2 squat slightly feet fixed baseline, 3 push off extending tiny legs, 4 airborne with tucked toes wings slightly flared body raised20pixels, 5 extend toes to land, 6 recover neutral. Preserve chunky round belly and sleepy eyes."
+    ],
+    [
+      "landing",
+      "Six landing keys frontview: 1 wings lifted high brake and toes reach down, 2 wings stretched horizontal, 3 lower wings toes touch baseline450, 4 squat heavy bodycompress legs wings foldpartly, 5 straighten wings almostfolded, 6 neutral exactreference. Same birdscale. Keep entire broad wings insidecell."
+    ],
+    [
+      "attack",
+      "Six comical attack keys frontview: 1 neutral, 2 slight squat, 3 puff belly strain wings lift just slightly, 4 deepest squat eyes squeezed shut tail lifts behind, 5 release exhale sleepyeyesopen, 6 neutral. Feet fixed baseline450. No droppings/effects/projectiles drawn; game handles separately. Broadfatbody throughout."
+    ],
+    [
+      "hit",
+      "Six cartoon hit-reaction keys: 1 neutral, 2 flinch eyes squeeze shut, 3 heavy body recoils slightly right wingspartlyopen, 4 bounceleft wingslooselyspread, 5 regainbalance, 6 neutral. Keep broad belly same body size. No stars, weapons, blood, extraeffects."
+    ],
+    [
+      "death",
+      "Six harmless defeated falling tumble keys. 1 stunned upright bird eyescrossed wingsloose, 2 entirebird rotated45degrees clockwise, 3 entirebirdhorizontal headright toesleft, 4 upside down toesup headdown, 5 horizontal headleft toesright, 6 rotated315degrees continues cycle. Same fat roundbirdbody scale, center of entirebird at256,256 percell. Rotate entirebird not justhead. Fullwings/head/toesfitinsidecell. No ground or lying corpse, code controls fall. NO shadows, glow, background or dividerlines."
+    ]
+  ]
+}

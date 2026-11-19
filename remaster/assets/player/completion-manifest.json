@@ -1,0 +1,253 @@
+{
+  "frameSize": [
+    270,
+    300
+  ],
+  "rows": 7,
+  "columns": 6,
+  "states": [
+    {
+      "row": 3,
+      "map": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        0
+      ],
+      "name": "swing"
+    },
+    {
+      "row": 4,
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "name": "hit"
+    },
+    {
+      "row": 5,
+      "map": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5,
+        5,
+        0
+      ],
+      "name": "wipe"
+    },
+    {
+      "row": 6,
+      "map": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        5
+      ],
+      "name": "death"
+    }
+  ],
+  "registration": [
+    {
+      "state": "swing",
+      "sourceRootX": 256,
+      "sourceBaseline": 486,
+      "scale": 0.43312101910828027,
+      "pose": 0
+    },
+    {
+      "state": "swing",
+      "sourceRootX": 256,
+      "sourceBaseline": 486,
+      "scale": 0.43312101910828027,
+      "pose": 1
+    },
+    {
+      "state": "swing",
+      "sourceRootX": 256,
+      "sourceBaseline": 486,
+      "scale": 0.43312101910828027,
+      "pose": 2
+    },
+    {
+      "state": "swing",
+      "sourceRootX": 256,
+      "sourceBaseline": 486,
+      "scale": 0.43312101910828027,
+      "pose": 3
+    },
+    {
+      "state": "swing",
+      "sourceRootX": 256,
+      "sourceBaseline": 486,
+      "scale": 0.43312101910828027,
+      "pose": 4
+    },
+    {
+      "state": "swing",
+      "sourceRootX": 256,
+      "sourceBaseline": 486,
+      "scale": 0.43312101910828027,
+      "pose": 5
+    },
+    {
+      "state": "hit",
+      "sourceRootX": 256,
+      "sourceBaseline": 484,
+      "scale": 0.4312896405919662,
+      "pose": 0
+    },
+    {
+      "state": "hit",
+      "sourceRootX": 256,
+      "sourceBaseline": 484,
+      "scale": 0.4312896405919662,
+      "pose": 1
+    },
+    {
+      "state": "hit",
+      "sourceRootX": 256,
+      "sourceBaseline": 484,
+      "scale": 0.4312896405919662,
+      "pose": 2
+    },
+    {
+      "state": "hit",
+      "sourceRootX": 256,
+      "sourceBaseline": 484,
+      "scale": 0.4312896405919662,
+      "pose": 3
+    },
+    {
+      "state": "hit",
+      "sourceRootX": 256,
+      "sourceBaseline": 484,
+      "scale": 0.4312896405919662,
+      "pose": 4
+    },
+    {
+      "state": "hit",
+      "sourceRootX": 256,
+      "sourceBaseline": 484,
+      "scale": 0.4312896405919662,
+      "pose": 5
+    },
+    {
+      "state": "wipe",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.4322033898305085,
+      "pose": 0
+    },
+    {
+      "state": "wipe",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.4322033898305085,
+      "pose": 1
+    },
+    {
+      "state": "wipe",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.4322033898305085,
+      "pose": 2
+    },
+    {
+      "state": "wipe",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.4322033898305085,
+      "pose": 3
+    },
+    {
+      "state": "wipe",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.4322033898305085,
+      "pose": 4
+    },
+    {
+      "state": "wipe",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.4322033898305085,
+      "pose": 5
+    },
+    {
+      "state": "death",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.42857142857142855,
+      "pose": 0
+    },
+    {
+      "state": "death",
+      "sourceRootX": 256,
+      "sourceBaseline": 489,
+      "scale": 0.42857142857142855,
+      "pose": 1
+    },
+    {
+      "state": "death",
+      "sourceRootX": 256,
+      "sourceBaseline": 488,
+      "scale": 0.42857142857142855,
+      "pose": 2
+    },
+    {
+      "state": "death",
+      "sourceRootX": 256,
+      "sourceBaseline": 461,
+      "scale": 0.42857142857142855,
+      "pose": 3
+    },
+    {
+      "state": "death",
+      "sourceRootX": 256,
+      "sourceBaseline": 461,
+      "scale": 0.42857142857142855,
+      "pose": 4
+    },
+    {
+      "state": "death",
+      "sourceRootX": 256,
+      "sourceBaseline": 462,
+      "scale": 0.42857142857142855,
+      "pose": 5
+    }
+  ]
+}

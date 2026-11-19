@@ -1,0 +1,29 @@
+{
+  "base": "Use case: stylized-concept. Make exactly1536x1024 sprite sheet:3columns2rows, SIX512x512 cells in reading order. Approved BOSS BOMBER reference is exact identity/style. Consistent bird scale across all cells, neutralfullheight400px centeredx256 feetbaseline455, wings maximum430px wide. EVERY fullbird fits owncell with >=24px empty margin, no cropping/overlap. Front-facing charcoalgray pigeon with stern inwardsloping exposed WHITE eyes dark smallpupils, long narrowneck, small bent darkopenbeak. OLIVE brown aviatorcap with fluffy WHITE fleece around forehead/face sides, longolive earflaps alongside neck. TWO skyBLUE GOGGLES raised ON TOP OF HEAD, never overeyes. Olive drab flightvest with fluffy WHITE broad COLLAR and WHITE trim around BOTH shoulder openings. TWO matching square flap chest pockets with small darkbuttons, central ZIPPER with small triangular olivepull. Folded/extended gray featherwings, rounded graybelly/tail, coralpinklegs and three-toedfeet. Preserve ALL costume details/raisedgoggles/fleece/pockets/zipper in everypose. Clean darkoutlines, restrainedsoftcelshading matchreference. NO chestmedal, wingsbadge, chestbuttonrow, blackjacket, weapons, bombs, props, humanarms/hands, text/grid/scenery/ground/shadows/glow. Actual fully TRANSPARENT alpha0 background, no white/gray matte or haze. ",
+  "states": [
+    [
+      "fly",
+      "Six front-facing wingbeat keys:1 wingshighV,2 diagonalupout,3 horizontalspread,4 diagonaldownout,5 lowestdownstroke,6 halfwayoutuprecovery. Head/body position andsize steady. Wings hinge at fleece shoulderholes belowcollar, costume staysattached. Feetlooselytucked, earsstraps flutter slightly. Original sternface."
+    ],
+    [
+      "hop",
+      "Six smallhopkeys:1 neutralapprovedstanding,2 slightcrouch feetbaseline455,3 pushoff legsextend,4 airborne body15pxhigher toeslooselytucked wingspartlyflare,5 toesreachlanding,6 neutralstanding. Preservebody/head scale, clothing andraisedgoggles."
+    ],
+    [
+      "landing",
+      "Six landingkeys:1 wingshighV toesdown,2 wingshorizontal legsextended,3 wingslower toestouchbaseline455,4 crouchlanding wingspartfold,5 straighten wingsnearlyfolded,6 neutralapprovedstanding. Samebodyscale andallcostumedetails. Clean alpha transparency."
+    ],
+    [
+      "attack",
+      "Six comicaldroppingattackkeys:1 neutralstanding,2 slightsquat,3 tensecrouch winglift,4 deepeststrain eyesclosed tailtiltsupbehind,5 relax eyesreopen,6 neutral. Feetstaybaseline455. No droppings/projectiles/effects drawn; gamecreatesseparately. Olivevest zipper/fleece/pockets andraisedbluegoggles preserved."
+    ],
+    [
+      "hit",
+      "Six harmlesshitreactionkeys:1 neutral,2 flinch eyesclosed headtilt,3 recoilright wingspartspread,4 reboundleft wingsloose,5 regainbalance,6 approvedneutral. Samebodyscale/identity andallclothingdetails. No injuries/stars/effects."
+    ],
+    [
+      "death",
+      "Six harmless defeatedtumblingkeys:1 uprightstunned wingsloose eyesunfocused,2 entirebirdrotated45degreesclockwise,3 horizontal headRIGHT feetLEFT,4 upsidedown headBOTTOM feetUP,5 horizontal headLEFT feetRIGHT,6 rotated315degreesclockwise headUPLEFT feetDOWNRIGHT. Rotate ENTIREbird/body/helmet/raisedgoggles/fleece/vest/pockets/wings/feet together aroundcellcenter256256. Uniformbirdscale allsix, fullbird fitswithin24..488 inowncell, no parts crossing512 boundaries, no detachedpieces/ground/effects."
+    ]
+  ]
+}

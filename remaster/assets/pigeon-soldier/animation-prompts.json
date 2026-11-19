@@ -1,0 +1,31 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "soldier-pigeon-idle-master-v1.png",
+  "base": "Use attached APPROVED SOLDIER PIGEON as strict character reference. Sprite sheet exactly1536x1024, 3 columns and2 rows, six512x512 cells read left-right top thenbottom. Same bird identity and scale across cells, neutral bird about330px tall centeredx256 feetbaseline450, allow wingroom. Gray narrow body, big goofy white eyes, tiny flat openbeak, gray camouflage helmet with shallowbrim, diagonalbandolier from viewerRIGHT shoulder to viewerLEFT belly with EXACTLY THREE gray oval attachments and shortdarktabs. Helmet and allthreeattachments remain attached in everypose, rotatewithbody, never swapstrapdirection. Gray wings with two charcoal bars, coralpink toes. Simple polished celshading and smoothdarkoutlines matching reference. Allpartsfitinsidecells nooverlap/cropping. Genuine transparent background alpha0, no shadows/glows, whitebackground, gridlines, text, labels, scenery or extraweapons. ",
+  "states": [
+    [
+      "fly",
+      "Six continuous front-view wingbeat poses: 1 wings raisedhighV, 2 diagonallyupout, 3 horizontalspread, 4 diagonallydownout, 5 lowestdownstroke, 6 recoveryhalfup. Bodyandhelmet stayat sameposition, pinkfeettuckedslightly. Keep the front strapand3ovals plainlyvisible throughout."
+    ],
+    [
+      "hop",
+      "Six small-hop poses: 1 neutralstanding, 2 crouch feetfixedbaseline, 3 push off extendlegs, 4 airborne tucktoes wingsslightlyopen bodyraised20px, 5 feetextend toland, 6 standingneutral. Samebody scale, helmetandbandolier secured."
+    ],
+    [
+      "landing",
+      "Six landing/braking poses frontview: 1 wingshighV toesreach, 2 horizontalwings feetextend, 3 wingsdiagonaldown toes touchbaseline450, 4 smallcrouch wingspartlyfold, 5 straighten wingsnearlyfold, 6 neutralstanding exactreference. Allthreeovalattachments remain."
+    ],
+    [
+      "attack",
+      "Six comical original pigeon dropping-attack poses frontview: 1 neutralstanding, 2 squat a little, 3 tense crouch chestpuff slightwinglift, 4 strain eyes squeezedclosed tail liftsbehind, 5 release relax eyesreopen, 6 neutral. Feetbaseline450 fixed. No grenade throwing, projectile or dropping/effects drawn; game supplies attackeffects separately. Keep helmetand3ovalstrapattachments stable."
+    ],
+    [
+      "hit",
+      "Six harmless cartoon hit-reaction poses: 1 neutral, 2 flinch eyesshut headtilts, 3 recoilright wingspartlyspread, 4 reboundleft wingsloose, 5 regainbalance, 6 neutral. No blood stars effects or props. Helmetandthreeovalattachments stayonbody."
+    ],
+    [
+      "death",
+      "Six harmless defeated falling-tumble poses: 1 stunned upright eyescrossed wingsloose, 2 entirebird45degreesclockwise, 3 horizontal headright feetleft, 4 upsidedown headbottom feetup, 5 horizontal headleft feetright, 6 rotated315degrees returns towardfirst. Entirebirdincludinghelmetandbandolier rotatesaboutcellcenter256,256. Maintain samebodysize, no individualposezooming. Keepfullbirdinsidecell, enoughmargin. No ground/lyingcorpse, code controlsfall. Helmetstayson, 3ovalattachments stayattached, no fallinglooseprops."
+    ]
+  ]
+}

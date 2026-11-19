@@ -1,0 +1,33 @@
+{
+  "base": "Use case: stylized-concept. Create exactly1536x1024 game sprite sheet,3columns2rows SIX512square cells reading left-right then bottom. Reference is APPROVED BOSS CRAZY identity. Every bird complete inside owncell with at least32px transparent margin; no crossing cell boundaries. Keep consistent body/head sizes in every pose: neutral totalheight360px centeredx256 feetbaseline440, wingspan430px, enough room to move. Gray pigeon with scruffy uneven head tufts swept right, TWO huge unequal white spiral eyes, dark crooked beak with WHITE FOAM bubbles around mouth (NOT blue drool), narrow neck. Broad pale cream/yellow loose jacket, muted olive edging, THREE round olive-gold buttons down slightly diagonal center placket, very wide sleeves with darkgray feather wings protruding. TWO loose pale yellow straps extend up/back from shoulder areas with round ends and small button dots. Short ragged gray belly and fan tail below jacket; coralpink thin legs/three-toedfeet. Off-balance silly original personality. Preserve costume, three buttons, straps, white foam and spiral eyes across ALL frames. Same clean dark outlines and restrained soft cel shading as reference. No human arms/hands, extra legs, props, medals, weapons, text, ground, scenery, grid, glow or shadows. ACTUAL transparent alpha0 background everywhere outside character silhouettes. ",
+  "states": [
+    [
+      "idle",
+      "Six gentle unsteady idle keys matching reference one-legged stance:1 exact approved neutral one leg bent out to viewerLEFT other down,2 head leans slightlyleft wings steady,3 head leans right straps bob a little,4 blink briefly halfclose spiraleyes,5 reopeneyes leanback towardcenter,6 return exact neutral. Feet and body scale stable, tiny motion, keepjacket sleeves extended sideways. No bigjump."
+    ],
+    [
+      "fly",
+      "Six wingbeats frontview:1 wings highV,2 diagonal upout,3 horizontal spread,4 diagonal downout,5 lowestdownstroke,6 recoveryhalfup. Jacket sleeves move with wings, jacketbody/head stay fixed position/scale; longloosestraps flutter behind neverdetach. Feet loosely tucked including oneleg bent. Keep bothspiraleyes andwhitefoam."
+    ],
+    [
+      "hop",
+      "Six small hop keys frontview:1 approved neutral crookedstance,2 slightcrouch,3 push off legs extend,4 airborne body15px higher toes tuck wing sleevesflare,5 feet reachdown forlanding,6 approvedneutral. Keep samejacket/body/head scale; foam andstraps attached."
+    ],
+    [
+      "landing",
+      "Six landing keys frontview:1 wings highV toesreachdown,2 wingshorizontal legsdown,3 wingslower toestouchbaseline440,4 crouch landing sleeves partfold,5 straighten,6 approvedneutral oneleg bentout sideways otherdown. Preserve costume andproportions, foamaroundbeak."
+    ],
+    [
+      "attack",
+      "Six comicaldroppingattackkeys frontview:1 approvedneutral,2 slight squat,3 tensecrouch sleeveslift a little,4 deepeststrain eyessqueezedclosed foamaroundbeak,5 relax spiraleyesreopen,6 neutral. Feet onbaseline440 withoneleg bentout. No droppings/projectiles/effects drawn; game generates separately."
+    ],
+    [
+      "hit",
+      "Six harmlesshitreactionkeys:1 neutral,2 flinch eyesclosed headtiltsleft,3 bodyrecoilright sleevewingsextend,4 reboundleft,5 regainbalance spiraleyesopen,6 approvedneutral. Preserve costume, threebuttons andwhitefoam, no stars or injury/effects."
+    ],
+    [
+      "death",
+      "Six harmless defeatedtumblingkeys:1 uprightstunned spiralingeyes sleevesloose,2 ENTIREbird rotated45degreesclockwise,3 horizontal headRIGHT feetLEFT,4 upsidedown headBOTTOM feetUP,5 horizontal headLEFT feetRIGHT,6 rotated315degreesclockwise headUPLEFT feetDOWNRIGHT. Allhead/body/jacket/straps/wings/feet rotate together aroundcellcenter256256. IMPORTANT broadjacket must fit at every rotation: uniformneutralheight300px for THISsheet with maximumwidth430px, everypose inside32..480 initscell. No detachedparts or ground/effects."
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "crazy-pigeon-idle-master-v1.png",
+  "base": "Strict identity reference: attached approved CRAZY PIGEON. Create game sprite sheet exactly1536x1024, 3 columns by2 rows, six equal512x512 cells reading left-right thenbottom. Same bird scale everycell, neutralbird about330pixels tall centeredx256 toesbaseline450 with wingroom. Preserve tilted scruffy gray head, unequal huge white SPIRAL eyes (thin gray spirals, NO pupils), blue drool attached at beak/chin, crooked tiny darkbeak, thin neck, longovalgraybelly with sparsecurlyfeathermarks, ragged feathers and tail, striped graywings and skinny coralpinktoes. Smoothdarkoutlines and simplecelshading matchingapproved reference. Goofy dizzy personality. Allbodyparts completelyinsidecells, nooverlap/cropping. Genuine transparent alpha0 background, NO glow/shadow/grid/whitebackground/labels/text/scenery/extraobjects. ",
+  "states": [
+    [
+      "idle",
+      "Six standing twitchy idle poses: 1 exactreference partlyspreadwings, 2 headleansleft wingstwitchslightly, 3 headcenter dips droolsways, 4 headleansright one wingslightlyhigher, 5 smallbodyshiver wingtipslooselyflared, 6 returnneutral. Feet fixed samebaseline, samebodyheight scale, spiraleyes stayopen. Do not make walk/jump or extreme squash."
+    ],
+    [
+      "fly",
+      "Six frontview wingbeat poses: 1 raggedwings highV, 2 diagonallyupout, 3 horizontalspread, 4 diagonallydownout, 5 lowestdownstroke besidebelly, 6 recoveryupout. Body/heads stay roughlysameposition andscale, skinnyfeetlooselytucked. Keepspiraleyes andbluedrool."
+    ],
+    [
+      "hop",
+      "Six small-hop keys: 1 neutralstanding, 2 crouch feetfixedbaseline, 3 legpush off, 4 airborne tucktoes andslightwingflare bodyraised20px, 5 extendtoes toland, 6 neutralstanding. Samebirdscale and spirals/drool."
+    ],
+    [
+      "landing",
+      "Six landing/braking keys: 1 wingshighV toesreachdown, 2 horizontalwings feetextend, 3 wingsdiagonaldown toescontactbaseline450, 4 crouch foldwingspartway, 5 straighten wingspartlyspread, 6 originalneutral reference. Spiraleyes/drool remain."
+    ],
+    [
+      "attack",
+      "Six original goofy pigeon dropping-attack keys: 1 neutral, 2 slight squat, 3 tensecrouch puffchest slightwinglift, 4 deepeststrain eyes remain white withspirals wingsflaredslightly droolstaysattached, 5 releaserelax, 6 neutral. Feetfixedbaseline450. No droppings/projectiles/effects inart, game supplies separately."
+    ],
+    [
+      "hit",
+      "Six harmless cartoon hit reactionkeys: 1 neutral, 2 flinch withtiltedhead spiraleyesanddroolstillvisible, 3 recoilright wingspartlyopen, 4 reboundleft wingsloose, 5 regainbalance, 6 neutral. Samebirdscale no gore/stars/effects. Keepallfeetinsidecell."
+    ],
+    [
+      "death",
+      "Six defeated falling-tumble keys: 1 upright stunned wingsloose spiraleyesvisible, 2 rotate ENTIREbird45degreesclockwise, 3 horizontal headright feetleft, 4 upside down headbottom feetup, 5 horizontal headleft feetright, 6 ROTATE315degreesclockwise meaning headUPLEFT feetDOWNRIGHT (opposite tilt from key2). Samebodyscale entirebirdrotation aboutcellcenter256,256. Keepfullraggedwings head drool toesinsidecells. No ground orlyingcorpse, codecontrolsfall. Keep spirals and blue drool attached androtatingwithhead."
+    ]
+  ]
+}

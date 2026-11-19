@@ -1,0 +1,35 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "pigeon-idle-master-v2.png",
+  "base": "Use the attached approved pigeon as the STRICT identity/style reference. Create a game animation sprite sheet, exactly 1536x1024, 3 columns by 2 rows of equal 512x512 cells, six poses read left to right top then bottom. Each bird centered on cell x=256 with feet baseline y=460 unless the described motion lifts feet. Same bird scale across every cell, standing bird about 300 pixels tall leaving wing room, no individual pose zooming. Preserve original front-facing gray narrow body, huge white goofy oval eyes, tiny open flat beak, tuft, two charcoal bars on gray wings, coral pink toes. Smooth crisp outlines and simple cel shading matching reference. Only one complete bird in each cell, generous transparent space, no cropping or overlap, no text, grid, labels, scenery, shadows or props. Actual transparent background. ",
+  "states": [
+    [
+      "idle",
+      "Six subtle breathing/blinking idle keys: 1 neutral identical reference, 2 inhale slight chest rise, 3 half blink, 4 eyes shut blink, 5 eyes reopen exhale, 6 return neutral. Feet stay fixed, folded wings, tiny motion, no walking."
+    ],
+    [
+      "fly",
+      "Six continuous wingbeat keys while facing viewer, body fixed in cell and feet tucked, same body size as neutral: 1 wings fully raised above shoulder in narrow V, 2 wings diagonal up/out, 3 wings stretched horizontal left/right with broad feathers, 4 wings diagonal down/out, 5 wings lowest downstroke beside belly, 6 recovery halfway up. Wings attached at shoulders, striped flight feathers, full wings fit inside cell. No standing pose and no floor."
+    ],
+    [
+      "hop",
+      "Six keys for small hopping cycle, bird facing viewer: 1 standing neutral feet baseline460, 2 crouch before takeoff feet same baseline, 3 extend legs push off, 4 airborne knees tucked and wings slightly open body rises 25px, 5 extend feet to land body drops, 6 neutral recovery feet baseline460. Same bird scale throughout, do not exaggerate jump."
+    ],
+    [
+      "landing",
+      "Six keys for landing with wing braking, front-facing: 1 airborne with wings high/out feet extended, 2 wings spread horizontal legs reaching, 3 wings angled forward/down toes touch baseline460, 4 compress knees and fold wings halfway, 5 nearly folded wings straighten posture, 6 neutral standing matching reference. Bird size constant, wings fit eachcell."
+    ],
+    [
+      "attack",
+      "Six keys of the original comical pigeon dropping attack, frontal viewpoint. 1 neutral standing, 2 squat slightly eyes wide, 3 tense crouch puff chest with wings opened just slightly, 4 deepest comical strain eyes squeezed shut tail raised behind, 5 release relax with eyes reopening and wings settling, 6 neutral standing reference. Feet fixed baseline460. No droppings or effect drawn, game handles projectile separately. No human anatomy."
+    ],
+    [
+      "hit",
+      "Six keys of a harmless cartoon hit reaction, front view: 1 neutral bird, 2 flinch with eyes squeezed and head tilt, 3 recoil sideways with wings spreading in surprise, 4 rebound other side wings half open, 5 regain balance feet under body, 6 recover neutral. No stars, effects, blood, weapons, or extraobjects. Keep feet near baseline460 and identity consistent."
+    ],
+    [
+      "death",
+      "Six keys of the original cartoon defeated pigeon tumbling/falling cycle, no gore: 1 stunned upright eyes crossed wings loose, 2 tilt body45degrees clockwise wings flail, 3 horizontal body headright feetleft, 4 upside down body feet up head down, 5 horizontal body headleft feetright, 6 tilt315degrees continuing full tumble back toward first. Rotate the ENTIRE bird about the same cell center (256,280), maintain body scale, allpartsfitinsidecell. It falls through world in code, do not draw ground or lying corpse. Clean cartoon feather silhouette."
+    ]
+  ]
+}
