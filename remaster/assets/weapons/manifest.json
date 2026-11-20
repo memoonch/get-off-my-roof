@@ -1,0 +1,187 @@
+{
+  "status": "Approved and integrated into release SWF",
+  "generatedWith": "built-in imagegen",
+  "assets": [
+    {
+      "sheetColumn": 0,
+      "status": "integrated",
+      "id": "newspaper",
+      "file": "icons/newspaper-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 0,
+      "height": 512
+    },
+    {
+      "sheetColumn": 1,
+      "status": "integrated",
+      "id": "broom",
+      "file": "icons/broom-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 0,
+      "height": 512
+    },
+    {
+      "sheetColumn": 2,
+      "status": "integrated",
+      "id": "golf-club",
+      "file": "icons/golf-club-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 0,
+      "height": 512
+    },
+    {
+      "sheetColumn": 0,
+      "status": "integrated",
+      "id": "mop",
+      "file": "icons/mop-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 1,
+      "height": 512
+    },
+    {
+      "sheetColumn": 1,
+      "status": "integrated",
+      "id": "rake",
+      "file": "icons/rake-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 1,
+      "height": 512
+    },
+    {
+      "sheetColumn": 2,
+      "status": "integrated",
+      "id": "baseball-bat",
+      "file": "icons/baseball-bat-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 1,
+      "height": 512
+    },
+    {
+      "sheetColumn": 0,
+      "status": "integrated",
+      "id": "pool-cue",
+      "file": "icons/pool-cue-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 2,
+      "height": 512
+    },
+    {
+      "sheetColumn": 1,
+      "status": "integrated",
+      "id": "nunchucks",
+      "file": "icons/nunchucks-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 2,
+      "height": 512
+    },
+    {
+      "sheetColumn": 2,
+      "status": "integrated",
+      "id": "shovel",
+      "file": "icons/shovel-v1.png",
+      "family": "melee",
+      "width": 512,
+      "sheetRow": 2,
+      "height": 512
+    },
+    {
+      "sheetColumn": 0,
+      "status": "integrated",
+      "id": "rock",
+      "file": "icons/rock-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 0,
+      "height": 512
+    },
+    {
+      "sheetColumn": 1,
+      "status": "integrated",
+      "id": "handful-of-rocks",
+      "file": "icons/handful-of-rocks-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 0,
+      "height": 512
+    },
+    {
+      "sheetColumn": 2,
+      "status": "integrated",
+      "id": "tennis-ball",
+      "file": "icons/tennis-ball-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 0,
+      "height": 512
+    },
+    {
+      "sheetColumn": 0,
+      "status": "integrated",
+      "id": "water-balloon",
+      "file": "icons/water-balloon-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 1,
+      "height": 512
+    },
+    {
+      "sheetColumn": 1,
+      "status": "integrated",
+      "id": "yo-yo",
+      "file": "icons/yo-yo-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 1,
+      "height": 512
+    },
+    {
+      "sheetColumn": 2,
+      "status": "integrated",
+      "id": "vinyl-record",
+      "file": "icons/vinyl-record-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 1,
+      "height": 512
+    },
+    {
+      "sheetColumn": 0,
+      "status": "integrated",
+      "id": "firecracker",
+      "file": "icons/firecracker-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 2,
+      "height": 512
+    },
+    {
+      "sheetColumn": 1,
+      "status": "integrated",
+      "id": "baseball",
+      "file": "icons/baseball-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 2,
+      "height": 512
+    },
+    {
+      "sheetColumn": 2,
+      "status": "integrated",
+      "id": "boomerang",
+      "file": "icons/boomerang-v1.png",
+      "family": "projectile",
+      "width": 512,
+      "sheetRow": 2,
+      "height": 512
+    }
+  ],
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Get Off My Roof — remaster research
 
-The playable art batches update the house, sky and garden, all eight illustrated player states, all five regular pigeon families (gray/black/brown), Boss Rocky with eight states including rock throw, Boss Fat with seven states, Boss Soldier with the approved medal design, Boss Crazy and Boss Bomber; each has seven states. All 20 pigeon types now have remastered animation art. See the README/integration notes in each asset folder. Weapons, effects, HUD and menus remain pending.
+The playable art batches update the house, sky and garden, all eight illustrated player states, all five regular pigeon families (gray/black/brown), Boss Rocky with eight states including rock throw, Boss Fat with seven states, Boss Soldier with the approved medal design, Boss Crazy and Boss Bomber; each has seven states. All 20 pigeon types now have remastered animation art. See the README/integration notes in each asset folder. All 18 shop weapons now have redesigned icons and gameplay art. Effects, HUD and menus remain pending.
 
 The current remaster presentation is **960 × 540 (16:9)**, with extended scenery, a right-aligned HUD, proportionally scaled artwork, and original gameplay coordinates. See `docs/widescreen.md` for implementation details.
 
@@ -28,3 +28,5 @@ Regenerate the inventory with `node tools/inspect-swf.cjs` from this directory. 
 The remaster opens directly to the main menu once the SWF is loaded, skipping the FOG sponsor preloader, logos, audio and Continue screen. The legacy API remains available for existing score/results code, but its preloader is never started. A custom loader can be added later. Startup also retains the duplicate-initialization guard that fixes the level white screen; see `docs/white-screen-fix.md`. Building requires Java and JPEXS; `FFDEC_JAR` can override the default installation path.
 
 A small top-left FPS counter is embedded in the remaster SWF. It samples actual stage ENTER_FRAME events over one-second windows and displays current FPS / 30 (the original target). It stays visible across menus, gameplay and pause screens and does not intercept input.
+
+Idle performance investigation and validation: see docs/performance-idle-investigation.md. The release now bounds delayed simulation catch-up and explicitly stops/disposes completed particle effects and render buffers.

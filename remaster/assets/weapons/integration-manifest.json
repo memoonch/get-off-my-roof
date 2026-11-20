@@ -1,0 +1,566 @@
+{
+  "registration": "Original symbol-local twip bounds, frame counts and labels",
+  "alpha": "premultiplied ARGB for DefineBitsLossless2",
+  "assets": [
+    {
+      "width": 200,
+      "raw": "runtime/612-newspaper.argb",
+      "png": "runtime/612-newspaper.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 612,
+      "name": "newspaper",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 201,
+      "raw": "runtime/647-broom.argb",
+      "png": "runtime/647-broom.png",
+      "bounds": [
+        -4,
+        997,
+        0,
+        1015
+      ],
+      "kind": "icon",
+      "id": 647,
+      "name": "broom",
+      "height": 203,
+      "frames": 1
+    },
+    {
+      "width": 202,
+      "raw": "runtime/623-golf-club.argb",
+      "png": "runtime/623-golf-club.png",
+      "bounds": [
+        -13,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 623,
+      "name": "golf-club",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 205,
+      "raw": "runtime/643-mop.argb",
+      "png": "runtime/643-mop.png",
+      "bounds": [
+        -26,
+        997,
+        0,
+        1024
+      ],
+      "kind": "icon",
+      "id": 643,
+      "name": "mop",
+      "height": 205,
+      "frames": 1
+    },
+    {
+      "width": 214,
+      "raw": "runtime/636-rake.argb",
+      "png": "runtime/636-rake.png",
+      "bounds": [
+        -73,
+        997,
+        0,
+        1095
+      ],
+      "kind": "icon",
+      "id": 636,
+      "name": "rake",
+      "height": 219,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/618-baseball-bat.argb",
+      "png": "runtime/618-baseball-bat.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 618,
+      "name": "baseball-bat",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/616-pool-cue.argb",
+      "png": "runtime/616-pool-cue.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 616,
+      "name": "pool-cue",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 191,
+      "raw": "runtime/641-nunchucks.argb",
+      "png": "runtime/641-nunchucks.png",
+      "bounds": [
+        -118,
+        1154,
+        -50,
+        1093
+      ],
+      "kind": "icon",
+      "id": 641,
+      "name": "nunchucks",
+      "height": 172,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/640-shovel.argb",
+      "png": "runtime/640-shovel.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 640,
+      "name": "shovel",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/608-rock.argb",
+      "png": "runtime/608-rock.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 608,
+      "name": "rock",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/609-handful-of-rocks.argb",
+      "png": "runtime/609-handful-of-rocks.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 609,
+      "name": "handful-of-rocks",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/649-tennis-ball.argb",
+      "png": "runtime/649-tennis-ball.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 649,
+      "name": "tennis-ball",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/657-water-balloon.argb",
+      "png": "runtime/657-water-balloon.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 657,
+      "name": "water-balloon",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/654-yo-yo.argb",
+      "png": "runtime/654-yo-yo.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 654,
+      "name": "yo-yo",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/650-vinyl-record.argb",
+      "png": "runtime/650-vinyl-record.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 650,
+      "name": "vinyl-record",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/629-firecracker.argb",
+      "png": "runtime/629-firecracker.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 629,
+      "name": "firecracker",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 200,
+      "raw": "runtime/648-baseball.argb",
+      "png": "runtime/648-baseball.png",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "kind": "icon",
+      "id": 648,
+      "name": "baseball",
+      "height": 200,
+      "frames": 1
+    },
+    {
+      "width": 176,
+      "raw": "runtime/619-boomerang.argb",
+      "png": "runtime/619-boomerang.png",
+      "bounds": [
+        0,
+        1173,
+        -38,
+        998
+      ],
+      "kind": "icon",
+      "id": 619,
+      "name": "boomerang",
+      "height": 156,
+      "frames": 1
+    },
+    {
+      "width": 159,
+      "raw": "runtime/858-newspaper.argb",
+      "png": "runtime/858-newspaper.png",
+      "bounds": [
+        -62,
+        992,
+        -139,
+        220
+      ],
+      "kind": "melee",
+      "id": 858,
+      "name": "newspaper",
+      "height": 54,
+      "frames": 2
+    },
+    {
+      "width": 370,
+      "raw": "runtime/947-broom.argb",
+      "png": "runtime/947-broom.png",
+      "bounds": [
+        -8,
+        2454,
+        -334,
+        312
+      ],
+      "kind": "melee",
+      "id": 947,
+      "name": "broom",
+      "height": 97,
+      "frames": 2
+    },
+    {
+      "width": 334,
+      "raw": "runtime/1013-golf-club.argb",
+      "png": "runtime/1013-golf-club.png",
+      "bounds": [
+        -8,
+        2214,
+        -156,
+        157
+      ],
+      "kind": "melee",
+      "id": 1013,
+      "name": "golf-club",
+      "height": 47,
+      "frames": 2
+    },
+    {
+      "width": 369,
+      "raw": "runtime/1009-mop.argb",
+      "png": "runtime/1009-mop.png",
+      "bounds": [
+        -10,
+        2449,
+        -230,
+        230
+      ],
+      "kind": "melee",
+      "id": 1009,
+      "name": "mop",
+      "height": 69,
+      "frames": 2
+    },
+    {
+      "width": 369,
+      "raw": "runtime/784-rake.argb",
+      "png": "runtime/784-rake.png",
+      "bounds": [
+        -6,
+        2452,
+        -532,
+        533
+      ],
+      "kind": "melee",
+      "id": 784,
+      "name": "rake",
+      "height": 160,
+      "frames": 2
+    },
+    {
+      "width": 278,
+      "raw": "runtime/848-baseball-bat.argb",
+      "png": "runtime/848-baseball-bat.png",
+      "bounds": [
+        -5,
+        1847,
+        -128,
+        130
+      ],
+      "kind": "melee",
+      "id": 848,
+      "name": "baseball-bat",
+      "height": 39,
+      "frames": 2
+    },
+    {
+      "width": 467,
+      "raw": "runtime/741-pool-cue.argb",
+      "png": "runtime/741-pool-cue.png",
+      "bounds": [
+        -7,
+        3100,
+        -52,
+        51
+      ],
+      "kind": "melee",
+      "id": 741,
+      "name": "pool-cue",
+      "height": 16,
+      "frames": 2
+    },
+    {
+      "width": 277,
+      "raw": "runtime/838-nunchucks.argb",
+      "png": "runtime/838-nunchucks.png",
+      "bounds": [
+        -9,
+        1833,
+        -338,
+        338
+      ],
+      "kind": "melee",
+      "id": 838,
+      "name": "nunchucks",
+      "height": 102,
+      "frames": 2
+    },
+    {
+      "width": 371,
+      "raw": "runtime/950-shovel.argb",
+      "png": "runtime/950-shovel.png",
+      "bounds": [
+        -8,
+        2462,
+        -304,
+        305
+      ],
+      "kind": "melee",
+      "id": 950,
+      "name": "shovel",
+      "height": 92,
+      "frames": 2
+    },
+    {
+      "width": 34,
+      "raw": "runtime/891-rock.argb",
+      "png": "runtime/891-rock.png",
+      "bounds": [
+        -10,
+        215,
+        -10,
+        229
+      ],
+      "kind": "projectile",
+      "id": 891,
+      "name": "rock",
+      "height": 36,
+      "frames": 1
+    },
+    {
+      "width": 45,
+      "raw": "runtime/953-tennis-ball.argb",
+      "png": "runtime/953-tennis-ball.png",
+      "bounds": [
+        -5,
+        293,
+        -5,
+        295
+      ],
+      "kind": "projectile",
+      "id": 953,
+      "name": "tennis-ball",
+      "height": 45,
+      "frames": 1
+    },
+    {
+      "width": 83,
+      "raw": "runtime/757-water-balloon.argb",
+      "png": "runtime/757-water-balloon.png",
+      "bounds": [
+        -71,
+        482,
+        -54,
+        511
+      ],
+      "kind": "projectile",
+      "id": 757,
+      "name": "water-balloon",
+      "height": 85,
+      "frames": 1
+    },
+    {
+      "width": 49,
+      "raw": "runtime/789-yo-yo.argb",
+      "png": "runtime/789-yo-yo.png",
+      "bounds": [
+        2,
+        325,
+        2,
+        325
+      ],
+      "kind": "projectile",
+      "id": 789,
+      "name": "yo-yo",
+      "height": 49,
+      "frames": 1
+    },
+    {
+      "width": 94,
+      "raw": "runtime/943-vinyl-record.argb",
+      "png": "runtime/943-vinyl-record.png",
+      "bounds": [
+        0,
+        626,
+        0,
+        626
+      ],
+      "kind": "projectile",
+      "id": 943,
+      "name": "vinyl-record",
+      "height": 94,
+      "frames": 1
+    },
+    {
+      "width": 45,
+      "raw": "runtime/979-firecracker.argb",
+      "png": "runtime/979-firecracker.png",
+      "bounds": [
+        -4,
+        291,
+        -15,
+        356
+      ],
+      "kind": "projectile",
+      "id": 979,
+      "name": "firecracker",
+      "height": 56,
+      "frames": 1
+    },
+    {
+      "width": 45,
+      "raw": "runtime/1040-baseball.argb",
+      "png": "runtime/1040-baseball.png",
+      "bounds": [
+        -5,
+        294,
+        -5,
+        294
+      ],
+      "kind": "projectile",
+      "id": 1040,
+      "name": "baseball",
+      "height": 45,
+      "frames": 1
+    },
+    {
+      "width": 122,
+      "raw": "runtime/751-boomerang.argb",
+      "png": "runtime/751-boomerang.png",
+      "bounds": [
+        -5,
+        802,
+        -5,
+        415
+      ],
+      "kind": "projectile",
+      "id": 751,
+      "name": "boomerang",
+      "height": 63,
+      "frames": 1
+    }
+  ]
+}

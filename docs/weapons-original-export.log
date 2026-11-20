@@ -1,0 +1,41 @@
+Nov 19, 2026 7:09:45 PM com.jpexs.decompiler.flash.gui.Main clearLogFile
+SEVERE: Cannot initialize logging
+java.nio.file.AccessDeniedException: C:\Users\Alpha\AppData\Roaming\JPEXS\FFDec\logs\log.txt.lck
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newFileChannel(WindowsFileSystemProvider.java:118)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:301)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:353)
+	at java.logging/java.util.logging.FileHandler.openFiles(FileHandler.java:490)
+	at java.logging/java.util.logging.FileHandler.<init>(FileHandler.java:300)
+	at com.jpexs.decompiler.flash.gui.Main.clearLogFile(Main.java:3964)
+	at com.jpexs.decompiler.flash.gui.Main.initLogging(Main.java:4046)
+	at com.jpexs.decompiler.flash.gui.Main.main(Main.java:3598)
+
+JPEXS Free Flash Decompiler v.26.3.0
+------------------------------------
+Exporting sprite...
+Exported frame 1/1 DefineSprite (chid: 608, cls: RockIcon)
+Exported frame 1/1 DefineSprite (chid: 609, cls: HandFullOfRocksIcon)
+Exported frame 1/1 DefineSprite (chid: 612, cls: NewspaperIcon)
+Exported frame 1/1 DefineSprite (chid: 616, cls: PoolStickIcon)
+Exported frame 1/1 DefineSprite (chid: 618, cls: BaseballBatIcon)
+Exported frame 1/1 DefineSprite (chid: 619, cls: BoomerangIcon)
+Exported frame 1/1 DefineSprite (chid: 623, cls: GolfClubIcon)
+Exported frame 1/1 DefineSprite (chid: 627, cls: SlingshotIcon)
+Exported frame 1/1 DefineSprite (chid: 636, cls: RakeIcon)
+Exported frame 1/1 DefineSprite (chid: 640, cls: ShovelIcon)
+Exported frame 1/1 DefineSprite (chid: 641, cls: NumchuckIcon)
+Exported frame 1/1 DefineSprite (chid: 643, cls: MopIcon)
+Exported frame 1/1 DefineSprite (chid: 646, cls: WhipIcon)
+Exported frame 1/1 DefineSprite (chid: 647, cls: BroomIcon)
+Exported frame 1/1 DefineSprite (chid: 648, cls: BaseBallIcon)
+Exported frame 1/1 DefineSprite (chid: 649, cls: TennisBallIcon)
+Exported frame 1/1 DefineSprite (chid: 650, cls: VinylRecordIcon)
+Exported frame 1/1 DefineSprite (chid: 654, cls: YoYoIcon)
+Exported frame 1/1 DefineSprite (chid: 657, cls: WaterBalloonIcon)
+Exported frame 1/1 DefineSprite (chid: 659, cls: RockSlingshotIcon)
+Exported frame 1/1 DefineSprite (chid: 662, cls: BigRockIcon)
+Export finished. Total export time: 00:04.056
+OK

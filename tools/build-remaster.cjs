@@ -26,6 +26,7 @@ fs.mkdirSync('build',{recursive:true});
 fs.writeFileSync('build/get-my-roof-remaster.swf',Buffer.concat([header,zlib.deflateSync(result)]));
 fs.writeFileSync('build/menu-changes.json',JSON.stringify({hiddenButtons:{353:'Credits',347:'Add This Game to Your Website',349:'Play More Games',335:'Play More Games (pause/results)'},placements:changes},null,2)+'\n');
 console.log('Built remaster; collapsed '+changes.length+' button placements.');
+require('./weapon-swf-assets.cjs').patchFile('build/get-my-roof-remaster.swf');
 const jar = process.env.FFDEC_JAR || 'C:/Program Files (x86)/FFDec/ffdec.jar';
 if(!fs.existsSync(jar))throw Error('Set FFDEC_JAR to the installed JPEXS ffdec.jar path.');
 const importRoot='build/import-scripts';

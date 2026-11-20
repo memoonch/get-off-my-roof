@@ -1,0 +1,46 @@
+Nov 19, 2026 7:25:53 PM com.jpexs.decompiler.flash.gui.Main clearLogFile
+SEVERE: Cannot initialize logging
+java.nio.file.AccessDeniedException: C:\Users\Alpha\AppData\Roaming\JPEXS\FFDec\logs\log.txt.lck
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newFileChannel(WindowsFileSystemProvider.java:118)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:301)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:353)
+	at java.logging/java.util.logging.FileHandler.openFiles(FileHandler.java:490)
+	at java.logging/java.util.logging.FileHandler.<init>(FileHandler.java:300)
+	at com.jpexs.decompiler.flash.gui.Main.clearLogFile(Main.java:3964)
+	at com.jpexs.decompiler.flash.gui.Main.initLogging(Main.java:4046)
+	at com.jpexs.decompiler.flash.gui.Main.main(Main.java:3598)
+
+JPEXS Free Flash Decompiler v.26.3.0
+------------------------------------
+Exporting sprite...
+Exported frame 1/2 DefineSprite (chid: 741, cls: com.getoffmyroof.assets.Assets_POOL_STICK_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 741, cls: com.getoffmyroof.assets.Assets_POOL_STICK_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 751, cls: com.getoffmyroof.assets.Assets_BOOMERANG_SPRITE)
+Exported frame 1/1 DefineSprite (chid: 757, cls: com.getoffmyroof.assets.Assets_WATER_BALLOON_SPRITE)
+Exported frame 1/2 DefineSprite (chid: 784, cls: com.getoffmyroof.assets.Assets_RAKE_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 784, cls: com.getoffmyroof.assets.Assets_RAKE_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 789, cls: com.getoffmyroof.assets.Assets_YOYO_SPRITE)
+Exported frame 1/2 DefineSprite (chid: 838, cls: com.getoffmyroof.assets.Assets_NUMCHUCK_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 838, cls: com.getoffmyroof.assets.Assets_NUMCHUCK_ANIMATIONS)
+Exported frame 1/2 DefineSprite (chid: 848, cls: com.getoffmyroof.assets.Assets_BASEBALL_BAT_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 848, cls: com.getoffmyroof.assets.Assets_BASEBALL_BAT_ANIMATIONS)
+Exported frame 1/2 DefineSprite (chid: 858, cls: com.getoffmyroof.assets.Assets_NEWSPAPER_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 858, cls: com.getoffmyroof.assets.Assets_NEWSPAPER_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 891, cls: com.getoffmyroof.assets.Assets_ROCK_SPRITE)
+Exported frame 1/1 DefineSprite (chid: 943, cls: com.getoffmyroof.assets.Assets_VINYL_RECORD_SPRITE)
+Exported frame 1/2 DefineSprite (chid: 947, cls: com.getoffmyroof.assets.Assets_BROOM_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 947, cls: com.getoffmyroof.assets.Assets_BROOM_ANIMATIONS)
+Exported frame 1/2 DefineSprite (chid: 950, cls: com.getoffmyroof.assets.Assets_SHOVEL_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 950, cls: com.getoffmyroof.assets.Assets_SHOVEL_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 953, cls: com.getoffmyroof.assets.Assets_TENNIS_BALL_SPRITE)
+Exported frame 1/1 DefineSprite (chid: 979, cls: com.getoffmyroof.assets.Assets_FIRECRACKER_SPRITE)
+Exported frame 1/2 DefineSprite (chid: 1009, cls: com.getoffmyroof.assets.Assets_MOP_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 1009, cls: com.getoffmyroof.assets.Assets_MOP_ANIMATIONS)
+Exported frame 1/2 DefineSprite (chid: 1013, cls: com.getoffmyroof.assets.Assets_GOLF_CLUB_ANIMATIONS)
+Exported frame 2/2 DefineSprite (chid: 1013, cls: com.getoffmyroof.assets.Assets_GOLF_CLUB_ANIMATIONS)
+Exported frame 1/1 DefineSprite (chid: 1040, cls: com.getoffmyroof.assets.Assets_BASE_BALL_SPRITE)
+Export finished. Total export time: 00:02.090
+OK

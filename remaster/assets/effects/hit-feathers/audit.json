@@ -1,0 +1,13 @@
+{
+  "status": "design review, not integrated",
+  "sourceFeatherSymbol": 153,
+  "sourceLinkage": "particle_pigeon_feather_1",
+  "trigger": "Pigeon.hit after invincibility check",
+  "originalBehavior": "SharedImage, family ColorInit tint, random rotation, drift, drag, gravity and fading",
+  "preserve": ["particle count", "lifetime", "position", "physics", "damage", "hit timing"],
+  "feather": "feather-master-v1.png",
+  "impact": "impact-master-v1.png",
+  "impactNote": "Optional new decorative flash; the original pigeon hit emits feathers, not a separate comic burst. Review separately before adding.",
+  "generatedWith": "built-in imagegen",
+  "next": "Approve appearance, then prepare small cached textures and integrate without adding recurring allocations."
+}

@@ -1,0 +1,424 @@
+{
+  "assets": [
+    {
+      "id": 612,
+      "name": "newspaper",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 647,
+      "name": "broom",
+      "kind": "icon",
+      "bounds": [
+        -4,
+        997,
+        0,
+        1015
+      ],
+      "frames": 1
+    },
+    {
+      "id": 623,
+      "name": "golf-club",
+      "kind": "icon",
+      "bounds": [
+        -13,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 643,
+      "name": "mop",
+      "kind": "icon",
+      "bounds": [
+        -26,
+        997,
+        0,
+        1024
+      ],
+      "frames": 1
+    },
+    {
+      "id": 636,
+      "name": "rake",
+      "kind": "icon",
+      "bounds": [
+        -73,
+        997,
+        0,
+        1095
+      ],
+      "frames": 1
+    },
+    {
+      "id": 618,
+      "name": "baseball-bat",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 616,
+      "name": "pool-cue",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 641,
+      "name": "nunchucks",
+      "kind": "icon",
+      "bounds": [
+        -118,
+        1154,
+        -50,
+        1093
+      ],
+      "frames": 1
+    },
+    {
+      "id": 640,
+      "name": "shovel",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 608,
+      "name": "rock",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 609,
+      "name": "handful-of-rocks",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 649,
+      "name": "tennis-ball",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 657,
+      "name": "water-balloon",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 654,
+      "name": "yo-yo",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 650,
+      "name": "vinyl-record",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 629,
+      "name": "firecracker",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 648,
+      "name": "baseball",
+      "kind": "icon",
+      "bounds": [
+        0,
+        997,
+        0,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 619,
+      "name": "boomerang",
+      "kind": "icon",
+      "bounds": [
+        0,
+        1173,
+        -38,
+        998
+      ],
+      "frames": 1
+    },
+    {
+      "id": 858,
+      "name": "newspaper",
+      "kind": "melee",
+      "bounds": [
+        -62,
+        992,
+        -139,
+        220
+      ],
+      "frames": 2
+    },
+    {
+      "id": 947,
+      "name": "broom",
+      "kind": "melee",
+      "bounds": [
+        -8,
+        2454,
+        -334,
+        312
+      ],
+      "frames": 2
+    },
+    {
+      "id": 1013,
+      "name": "golf-club",
+      "kind": "melee",
+      "bounds": [
+        -8,
+        2214,
+        -156,
+        157
+      ],
+      "frames": 2
+    },
+    {
+      "id": 1009,
+      "name": "mop",
+      "kind": "melee",
+      "bounds": [
+        -10,
+        2449,
+        -230,
+        230
+      ],
+      "frames": 2
+    },
+    {
+      "id": 784,
+      "name": "rake",
+      "kind": "melee",
+      "bounds": [
+        -6,
+        2452,
+        -532,
+        533
+      ],
+      "frames": 2
+    },
+    {
+      "id": 848,
+      "name": "baseball-bat",
+      "kind": "melee",
+      "bounds": [
+        -5,
+        1847,
+        -128,
+        130
+      ],
+      "frames": 2
+    },
+    {
+      "id": 741,
+      "name": "pool-cue",
+      "kind": "melee",
+      "bounds": [
+        -7,
+        3100,
+        -52,
+        51
+      ],
+      "frames": 2
+    },
+    {
+      "id": 838,
+      "name": "nunchucks",
+      "kind": "melee",
+      "bounds": [
+        -9,
+        1833,
+        -338,
+        338
+      ],
+      "frames": 2
+    },
+    {
+      "id": 950,
+      "name": "shovel",
+      "kind": "melee",
+      "bounds": [
+        -8,
+        2462,
+        -304,
+        305
+      ],
+      "frames": 2
+    },
+    {
+      "id": 891,
+      "name": "rock",
+      "kind": "projectile",
+      "bounds": [
+        -10,
+        215,
+        -10,
+        229
+      ],
+      "frames": 1
+    },
+    {
+      "id": 953,
+      "name": "tennis-ball",
+      "kind": "projectile",
+      "bounds": [
+        -5,
+        293,
+        -5,
+        295
+      ],
+      "frames": 1
+    },
+    {
+      "id": 757,
+      "name": "water-balloon",
+      "kind": "projectile",
+      "bounds": [
+        -71,
+        482,
+        -54,
+        511
+      ],
+      "frames": 1
+    },
+    {
+      "id": 789,
+      "name": "yo-yo",
+      "kind": "projectile",
+      "bounds": [
+        2,
+        325,
+        2,
+        325
+      ],
+      "frames": 1
+    },
+    {
+      "id": 943,
+      "name": "vinyl-record",
+      "kind": "projectile",
+      "bounds": [
+        0,
+        626,
+        0,
+        626
+      ],
+      "frames": 1
+    },
+    {
+      "id": 979,
+      "name": "firecracker",
+      "kind": "projectile",
+      "bounds": [
+        -4,
+        291,
+        -15,
+        356
+      ],
+      "frames": 1
+    },
+    {
+      "id": 1040,
+      "name": "baseball",
+      "kind": "projectile",
+      "bounds": [
+        -5,
+        294,
+        -5,
+        294
+      ],
+      "frames": 1
+    },
+    {
+      "id": 751,
+      "name": "boomerang",
+      "kind": "projectile",
+      "bounds": [
+        -5,
+        802,
+        -5,
+        415
+      ],
+      "frames": 1
+    }
+  ]
+}
