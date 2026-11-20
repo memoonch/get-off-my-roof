@@ -400,16 +400,19 @@ package com.getoffmyroof.screens
             this.m_rewardSystem.update(param1);
             this.m_playerController.update(param1);
             this.m_displayManager.update(param1);
-            var qaOld:int = int(this.qaTime / 1000);
+            var qaOld:int = int(this.qaTime / 2500);
             this.qaTime += param1;
-            if(int(this.qaTime / 1000) != qaOld)
+            if(int(this.qaTime / 2500) != qaOld)
             {
-               Input.instance.worldMousePos.x = 320;
-               Input.instance.worldMousePos.y = 100;
-               this.m_player.activatePrimaryWeapon();
-               this.m_player.activateSecondaryWeapon();
-               TweenMax.delayedCall(0.12,this.m_player.deactivatePrimaryWeapon);
-               TweenMax.delayedCall(0.12,this.m_player.deactivateSecondaryWeapon);
+               var burst0:com.getoffmyroof.particleEffects.VinylRecordExplosionEffect = new com.getoffmyroof.particleEffects.VinylRecordExplosionEffect(new com.getoffmyroof.particleEffects.VinylRecordExplosionEffectParams());
+               burst0.setPosition(200,260);
+               this.m_displayManager.addParticleEffect("ParticleEffectDisplayTop",burst0);
+               var burst1:com.getoffmyroof.particleEffects.PooSplatterEffect = new com.getoffmyroof.particleEffects.PooSplatterEffect(new com.getoffmyroof.particleEffects.PooSplatterEffectParams());
+               burst1.setPosition(320,260);
+               this.m_displayManager.addParticleEffect("ParticleEffectDisplayTop",burst1);
+               var burst2:com.getoffmyroof.particleEffects.WipeFaceEffect = new com.getoffmyroof.particleEffects.WipeFaceEffect(new com.getoffmyroof.particleEffects.WipeFaceEffectParams());
+               burst2.setPosition(440,320);
+               this.m_displayManager.addParticleEffect("ParticleEffectDisplayTop",burst2);
             }
          }
          this.handleInput();

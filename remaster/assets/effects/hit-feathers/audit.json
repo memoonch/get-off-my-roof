@@ -1,13 +1,43 @@
 {
-  "status": "design review, not integrated",
-  "sourceFeatherSymbol": 153,
+  "status": "Original vector feather restored; display-resolution rendering enhancement",
+  "sourceSymbol": 153,
+  "sourceShape": 152,
   "sourceLinkage": "particle_pigeon_feather_1",
-  "trigger": "Pigeon.hit after invincibility check",
-  "originalBehavior": "SharedImage, family ColorInit tint, random rotation, drift, drag, gravity and fading",
-  "preserve": ["particle count", "lifetime", "position", "physics", "damage", "hit timing"],
-  "feather": "feather-master-v1.png",
-  "impact": "impact-master-v1.png",
-  "impactNote": "Optional new decorative flash; the original pigeon hit emits feathers, not a separate comic burst. Review separately before adding.",
-  "generatedWith": "built-in imagegen",
-  "next": "Approve appearance, then prepare small cached textures and integrate without adding recurring allocations."
+  "originalLocalBoundsTwips": [
+    -185,
+    186,
+    -70,
+    70
+  ],
+  "artwork": "Original SWF vector art, unchanged",
+  "emission": "Original FeatherBlastEffect class restored verbatim",
+  "flash": "Removed",
+  "previousGeneratedAssets": "Rejected; retained as archived designs, not loaded by release",
+  "rendering": "Pool of independent native MovieClip instances follows each particle matrix/color/alpha; no low-resolution bitmap capture for feathers",
+  "preserve": [
+    "count",
+    "positions",
+    "velocities",
+    "tint",
+    "lifetime",
+    "rotation",
+    "drift",
+    "gravity",
+    "drag",
+    "hit trigger",
+    "damage"
+  ],
+  "verification": {
+    "originalArt": "Shape 152 and sprite 153 byte-for-byte identical to source",
+    "originalEffect": "FeatherBlastEffect.as verbatim source match",
+    "originalBitmapSample": "4 live particles, 38 x 58 spread, 29.5 FPS",
+    "nativeVectorSample": "6 live particles, 49 x 69 spread, 29.6 FPS",
+    "comparisonNote": "Randomized bursts sampled at different times, not frame-matched",
+    "runtimeErrors": "None in inspected console sample",
+    "weaponRegression": "35 symbol registration checks pass",
+    "proof": [
+      "docs/feathers-original-baseline.png",
+      "docs/feathers-original-enhanced.png"
+    ]
+  }
 }

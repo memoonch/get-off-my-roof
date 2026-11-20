@@ -38,6 +38,72 @@ while(pos<body.length){const h=body.readUInt16LE(pos);pos+=2;const code=h>>6;let
 if(changed!==1)throw Error('Missing Day 1 XML');
 const out=Buffer.concat(parts),header=Buffer.from(input.subarray(0,8));header.writeUInt32LE(out.length+8,4);
 fs.writeFileSync('build/weapons-qa-input.swf',Buffer.concat([header,zlib.deflateSync(out)]));
+if(process.env.EFFECTS_QA){
+ const mode=process.env.EFFECTS_QA;
+ const definitions={
+  feather:['FeatherBlastEffect','FeatherBlastEffectParams','particle_pigeon_feather_1'],
+  water:['WaterExplosionEffect','WaterExplosionEffectParams','com.getoffmyroof.assets::Assets_WATER_PARTICLE'],
+  explosion:['ExplosionEffect','ExplosionEffectParams','com.getoffmyroof.assets::Assets_EXPLOSION_PARTICLE'],
+  vinyl:['VinylRecordExplosionEffect','VinylRecordExplosionEffectParams','com.getoffmyroof.assets::Assets_VINYL_RECORD_PARTICLE'],
+  splat:['PooSplatterEffect','PooSplatterEffectParams','org.flintparticles.common.displayObjects::RadialDot'],
+  wipe:['WipeFaceEffect','WipeFaceEffectParams','particle_sparkle_1']
+ };
+ const selected=mode==='remaining'?['vinyl','splat','wipe']:[definitions[mode]?mode:'feather'];
+ const predicate=selected.map(key=>'qaKind == '+JSON.stringify(definitions[key][2])).join(' || ');
+ const rendererPath=folder+'/com/whatthefawk/particleEffects/ParticleRenderer.as';
+ let renderer=fs.readFileSync(rendererPath,'utf8');
+ renderer=renderer.replace('private var m_vectorLayer:Sprite;', 'private static var s_qaLabel:flash.text.TextField;\n      private var m_vectorLayer:Sprite;');
+ renderer=renderer.replace('if(isVector)', 'if(isVector && int(com.whatthefawk.screens.Root.root.loaderInfo.parameters.qaWeapon) != 1)');
+ renderer=renderer.replace('         _bitmapData.unlock();', `         var count:int = 0;
+         var records:int = 0;
+         var splats:int = 0;
+         var sparkles:int = 0;
+         var minX:Number = 10000;
+         var maxX:Number = -10000;
+         for each(var particle:Particle2D in param1)
+         {
+            var qaKind:String = getQualifiedClassName(particle.image);
+            if(${predicate})
+            {
+               count++;
+               if(qaKind == "com.getoffmyroof.assets::Assets_VINYL_RECORD_PARTICLE")records++;
+               if(qaKind == "org.flintparticles.common.displayObjects::RadialDot")splats++;
+               if(qaKind == "particle_sparkle_1")sparkles++;
+               minX = Math.min(minX,particle.x);
+               maxX = Math.max(maxX,particle.x);
+            }
+         }
+         if(count > 0)
+         {
+            if(s_qaLabel == null)
+            {
+               s_qaLabel = new flash.text.TextField();
+               s_qaLabel.defaultTextFormat = new flash.text.TextFormat("_sans",12,0xA5F3B4,true);
+               s_qaLabel.width = 730;
+               s_qaLabel.height = 22;
+               s_qaLabel.x = 8;
+               s_qaLabel.y = 34;
+               s_qaLabel.background = true;
+               s_qaLabel.backgroundColor = 0x161B22;
+               com.whatthefawk.screens.Root.stage.addChild(s_qaLabel);
+            }
+            s_qaLabel.text = (int(com.whatthefawk.screens.Root.root.loaderInfo.parameters.qaWeapon) == 1 ? "ORIGINAL bitmap" : "SHARPER original vectors") + " | live " + count + " | record " + records + " splat " + splats + " wipe " + sparkles;
+         }
+         _bitmapData.unlock();`);
+ fs.writeFileSync(rendererPath,renderer);
+ let game=fs.readFileSync(folder+name,'utf8');
+ const bursts=selected.map((key,index)=>{
+  const def=definitions[key],x=selected.length===1?320:[200,320,440][index],y=key==='wipe'?320:260;
+  return '               var burst'+index+':com.getoffmyroof.particleEffects.'+def[0]+' = new com.getoffmyroof.particleEffects.'+def[0]+'(new com.getoffmyroof.particleEffects.'+def[1]+'());\n               burst'+index+'.setPosition('+x+','+y+');\n               this.m_displayManager.addParticleEffect("ParticleEffectDisplayTop",burst'+index+');';
+ }).join('\n');
+ game=game.replace(/            var qaOld:int[\s\S]*?TweenMax.delayedCall\(0.12,this.m_player.deactivateSecondaryWeapon\);\s*}/,`            var qaOld:int = int(this.qaTime / 2500);
+            this.qaTime += param1;
+            if(int(this.qaTime / 2500) != qaOld)
+            {
+${bursts}
+            }`);
+ fs.writeFileSync(folder+name,game);
+}
 const result=spawnSync('java',['-jar',process.env.FFDEC_JAR||'C:/Program Files (x86)/FFDec/ffdec.jar','-onerror','abort','-importScript','build/weapons-qa-input.swf','build/weapons-qa.swf',folder],{encoding:'utf8'});
 fs.writeFileSync('docs/weapons-qa-build.log',(result.stdout||'')+(result.stderr||''));
 if(result.error||result.status!==0)throw result.error||Error('Weapon QA compilation failed');

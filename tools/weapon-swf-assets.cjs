@@ -28,7 +28,7 @@ function boundsOf(list){const defs=new Map();for(const t of list)if([2,22,32,83,
   const points=[];for(const item of depths.values()){if(item.id===undefined)continue;const r=bounds(item.id,[...stack,id]),m=item.m;for(const x of [r[0],r[1]])for(const y of [r[2],r[3]])points.push([m.a*x+m.c*y+m.tx,m.b*x+m.d*y+m.ty]);}
   if(!points.length)throw Error('Empty sprite '+id);return [Math.floor(Math.min(...points.map(p=>p[0]))),Math.ceil(Math.max(...points.map(p=>p[0]))),Math.floor(Math.min(...points.map(p=>p[1]))),Math.ceil(Math.max(...points.map(p=>p[1])))];
  }return bounds;}
-function inspect(file='source/get-my-roof.swf'){const swf=decode(fs.readFileSync(file)),bounds=boundsOf(swf.list);return targets.map(([id,name,kind])=>{const sprite=swf.list.find(t=>t.code===39&&t.data.readUInt16LE(0)===id);return {id,name,kind,bounds:bounds(id),frames:sprite.data.readUInt16LE(2),labels:tags(sprite.data,4).filter(t=>t.code===43).map(t=>t.data.toString('utf8').split('\0')[0])};});}
+function inspect(file='source/get-my-roof.swf',selectedTargets=targets){const swf=decode(fs.readFileSync(file)),bounds=boundsOf(swf.list);return selectedTargets.map(([id,name,kind])=>{const sprite=swf.list.find(t=>t.code===39&&t.data.readUInt16LE(0)===id);return {id,name,kind,bounds:bounds(id),frames:sprite.data.readUInt16LE(2),labels:tags(sprite.data,4).filter(t=>t.code===43).map(t=>t.data.toString('utf8').split('\0')[0])};});}
 class Writer{
  constructor(){this.bits='';}put(v,n){if(v<0)v+=2**n;this.bits+=v.toString(2).padStart(n,'0');return this;}
  end(){return Buffer.from(this.bits.padEnd(Math.ceil(this.bits.length/8)*8,'0').match(/.{8}/g).map(v=>parseInt(v,2)));}
